@@ -1,5 +1,5 @@
 {
-  "name": "@applicaster/quick-brick-oc-plugin",
+  "name": "@applicaster/quick-brick-oc-login-plugin",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -22,6 +22,8 @@
     "react-native": "0.57.5"
   },
   "dependencies": {
-    "ramda": "^0.26.1"
+    "ramda": "^0.26.1",
+    "react": "16.8.3",
+    "react-native": "0.59.10"
   }
 }

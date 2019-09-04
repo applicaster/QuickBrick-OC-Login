@@ -1,6 +1,6 @@
 {
   "name": "@applicaster/quick-brick-oc-login-plugin",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@applicaster/zapp-react-native-bridge": "^2.0.3-rc.28",
-    "@applicaster/zapp-react-native-ui-components": "^2.0.3-rc.31",
+    "@applicaster/zapp-react-native-bridge": "^2.0.3-rc.69",
+    "@applicaster/zapp-react-native-ui-components": "^2.0.3-rc.69",
     "react": "16.8.3",
-    "react-native": "0.59.10"
+    "react-native": "0.59.10",
+    "react-native-web": "^0.11.7"
   },
   "peerDependencies": {
-    "@applicaster/zapp-react-native-bridge": "^2.0.3-rc.28",
-    "@applicaster/zapp-react-native-ui-components": "^2.0.3-rc.31",
+    "@applicaster/zapp-react-native-bridge": "^2.0.3-rc.69",
+    "@applicaster/zapp-react-native-ui-components": "^2.0.3-rc.69",
     "react": "16.8.3",
-    "react-native": "0.59.10"
+    "react-native": "0.59.10",
+    "react-native-web": "^0.11.7"
   }
 }

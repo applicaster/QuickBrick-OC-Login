@@ -31,14 +31,14 @@
     react-router-native "^4.3.0"
     url "^0.11.0"
 
-"@applicaster/quick-brick-core@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/quick-brick-core/-/quick-brick-core-2.0.3-rc.65.tgz#bb3794df02d4a80374732a42229322248973bc95"
+"@applicaster/quick-brick-core@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/quick-brick-core/-/quick-brick-core-2.0.3-rc.69.tgz#90fb918e4b5499372989ba9536137f35db10d558"
   dependencies:
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     axios "^0.18.0"
     camelize "^1.0.0"
     query-string "^6.1.0"
@@ -80,9 +80,9 @@
     snake-case "2.1.0"
     xml2js "0.4.17"
 
-"@applicaster/zapp-pipes-provider-mpx-old@1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-pipes-provider-mpx-old/-/zapp-pipes-provider-mpx-old-1.0.10.tgz#be8ca1b7be0895c6a706a7a71b3003096c0d4fe1"
+"@applicaster/zapp-pipes-provider-mpx@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-pipes-provider-mpx/-/zapp-pipes-provider-mpx-1.0.8.tgz#2437033f12faedf17a7add1bcf01f7ff9ea30683"
   dependencies:
     axios "^0.16.2"
 
@@ -102,15 +102,15 @@
     typeface-montserrat "^0.0.54"
     video.js "^7.2.2"
 
-"@applicaster/zapp-react-dom-app@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-dom-app/-/zapp-react-dom-app-2.0.3-rc.65.tgz#b2df77dff4c9a6c945d0cba0142e8eba4b9d9f45"
+"@applicaster/zapp-react-dom-app@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-dom-app/-/zapp-react-dom-app-2.0.3-rc.69.tgz#ee898c8e532f66fa53bd5fb46f59fc34fb50d74c"
   dependencies:
-    "@applicaster/zapp-react-dom-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-dom-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     history "^4.7.2"
     ramda "^0.25.0"
     react-lifecycles-compat "^3.0.4"
@@ -128,13 +128,13 @@
     camelize "^1.0.0"
     ramda "0.25.0"
 
-"@applicaster/zapp-react-dom-cli-template@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-dom-cli-template/-/zapp-react-dom-cli-template-2.0.3-rc.65.tgz#dbec95c8b5971d922f54f0b1e22aed9cb0ea53f6"
+"@applicaster/zapp-react-dom-cli-template@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-dom-cli-template/-/zapp-react-dom-cli-template-2.0.3-rc.69.tgz#80328438c1f7b893c2fbf55047f963f47edc6bae"
   dependencies:
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-dom-app" "2.0.3-rc.65"
-    "@applicaster/zapp-react-dom-ui-components" "2.0.3-rc.65"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-dom-app" "2.0.3-rc.69"
+    "@applicaster/zapp-react-dom-ui-components" "2.0.3-rc.69"
     camelize "^1.0.0"
     ramda "0.25.0"
 
@@ -148,14 +148,14 @@
     "@applicaster/zapp-react-native-utils" "2.0.3-rc.45"
     react-hot-loader "^4.3.8"
 
-"@applicaster/zapp-react-dom-ui-components@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-dom-ui-components/-/zapp-react-dom-ui-components-2.0.3-rc.65.tgz#1ff384d461e65d73b47d775580bc6b168b0751fa"
+"@applicaster/zapp-react-dom-ui-components@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-dom-ui-components/-/zapp-react-dom-ui-components-2.0.3-rc.69.tgz#e82aba64c6c7466e688b4cab6a99fb9a2a42edfc"
   dependencies:
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     react-hot-loader "^4.3.8"
 
 "@applicaster/zapp-react-native-android-tv-app@2.0.3-rc.45":
@@ -171,15 +171,15 @@
     react-lifecycles-compat "^3.0.4"
     react-router-native "^4.3.0"
 
-"@applicaster/zapp-react-native-android-tv-app@2.0.3-rc.68":
-  version "2.0.3-rc.68"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-android-tv-app/-/zapp-react-native-android-tv-app-2.0.3-rc.68.tgz#98f2c088e02e893db9d37dc33b4fa30ee4af2c1b"
+"@applicaster/zapp-react-native-android-tv-app@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-android-tv-app/-/zapp-react-native-android-tv-app-2.0.3-rc.69.tgz#288ecec5a99fc65aa354a324b4300942d70aa289"
   dependencies:
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     ramda "^0.26.0"
     react-lifecycles-compat "^3.0.4"
     react-router-native "^4.3.0"
@@ -194,15 +194,15 @@
     "@applicaster/zapp-react-native-android-tv-ui-components" "2.0.3-rc.45"
     "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.45"
 
-"@applicaster/zapp-react-native-android-tv-cli-template@2.0.3-rc.68":
-  version "2.0.3-rc.68"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-android-tv-cli-template/-/zapp-react-native-android-tv-cli-template-2.0.3-rc.68.tgz#6f2541043603131b23edcdf07bd193dc81dc819e"
+"@applicaster/zapp-react-native-android-tv-cli-template@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-android-tv-cli-template/-/zapp-react-native-android-tv-cli-template-2.0.3-rc.69.tgz#c85e3f3b0a3b0e02b5ea93c6bad47b79091667aa"
   dependencies:
     "@applicaster/babel-preset-quick-brick" "2.0.3-rc.39"
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-android-tv-app" "2.0.3-rc.68"
-    "@applicaster/zapp-react-native-android-tv-ui-components" "2.0.3-rc.68"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-android-tv-app" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-android-tv-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
 
 "@applicaster/zapp-react-native-android-tv-ui-components@2.0.3-rc.45":
   version "2.0.3-rc.45"
@@ -214,13 +214,13 @@
     ramda "^0.26.0"
     uuid "^3.3.2"
 
-"@applicaster/zapp-react-native-android-tv-ui-components@2.0.3-rc.68":
-  version "2.0.3-rc.68"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-android-tv-ui-components/-/zapp-react-native-android-tv-ui-components-2.0.3-rc.68.tgz#04b63974fb97a8ec8e7b1c7004fc46ee51fa9322"
+"@applicaster/zapp-react-native-android-tv-ui-components@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-android-tv-ui-components/-/zapp-react-native-android-tv-ui-components-2.0.3-rc.69.tgz#55e57a02f165cf69e153d0aa76c58d11447a772b"
   dependencies:
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     ramda "^0.26.0"
     uuid "^3.3.2"
 
@@ -241,15 +241,15 @@
     react-router-native "^4.3.0"
     url "^0.11.0"
 
-"@applicaster/zapp-react-native-app@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-app/-/zapp-react-native-app-2.0.3-rc.65.tgz#63de093caf635781b403959286f8edc0170efbbb"
+"@applicaster/zapp-react-native-app@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-app/-/zapp-react-native-app-2.0.3-rc.69.tgz#16fa2b57f02c98fc8c216c740c009fbf439f157e"
   dependencies:
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     axios "^0.18.0"
     camelize "^1.0.0"
     query-string "^6.1.0"
@@ -258,16 +258,23 @@
     react-router-native "^4.3.0"
     url "^0.11.0"
 
-"@applicaster/zapp-react-native-bridge@2.0.3-rc.39", "@applicaster/zapp-react-native-bridge@^2.0.3-rc.28":
+"@applicaster/zapp-react-native-bridge@2.0.3-rc.39":
   version "2.0.3-rc.39"
   resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-bridge/-/zapp-react-native-bridge-2.0.3-rc.39.tgz#345559be7c44032d9f58d5cb1c42f6cd06813126"
   dependencies:
     "@applicaster/zapp-pipes-dev-kit" "1.3.0"
     uuid "^3.3.2"
 
-"@applicaster/zapp-react-native-bridge@2.0.3-rc.64":
-  version "2.0.3-rc.64"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-bridge/-/zapp-react-native-bridge-2.0.3-rc.64.tgz#86858a5ae0da30c9ecf4fde423a6438703c278c1"
+"@applicaster/zapp-react-native-bridge@2.0.3-rc.45-alpha.dff261df", "@applicaster/zapp-react-native-bridge@^2.0.3-rc.28":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-bridge/-/zapp-react-native-bridge-2.0.3-rc.45-alpha.dff261df.tgz#def0c594527e88021e39650a8efd2a78de18cc9d"
+  dependencies:
+    "@applicaster/zapp-pipes-dev-kit" "1.3.0"
+    uuid "^3.3.2"
+
+"@applicaster/zapp-react-native-bridge@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-bridge/-/zapp-react-native-bridge-2.0.3-rc.69.tgz#bd0b2d27f9cffaacf0a19fdf5ac07a0b41e9ecaa"
   dependencies:
     "@applicaster/zapp-pipes-dev-kit" "1.3.0"
     uuid "^3.3.2"
@@ -281,15 +288,15 @@
     "@applicaster/zapp-react-native-bridge" "2.0.3-rc.39"
     "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.45"
 
-"@applicaster/zapp-react-native-cli-template@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-cli-template/-/zapp-react-native-cli-template-2.0.3-rc.65.tgz#84a8249b721fdb3a986e7dc847da438c826354fd"
+"@applicaster/zapp-react-native-cli-template@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-cli-template/-/zapp-react-native-cli-template-2.0.3-rc.69.tgz#d994ba223fb42e24c9e621b9e32cafffc532233b"
   dependencies:
     "@applicaster/babel-preset-quick-brick" "2.0.3-rc.39"
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-app" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-app" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
 
 "@applicaster/zapp-react-native-redux@2.0.3-rc.45":
   version "2.0.3-rc.45"
@@ -303,12 +310,24 @@
     redux-thunk "^2.3.0"
     reselect "^3.0.1"
 
-"@applicaster/zapp-react-native-redux@2.0.3-rc.64":
-  version "2.0.3-rc.64"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-redux/-/zapp-react-native-redux-2.0.3-rc.64.tgz#96f712ea482f2acac23ff7476d15ed2c7ed7f213"
+"@applicaster/zapp-react-native-redux@2.0.3-rc.45-alpha.dff261df":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-redux/-/zapp-react-native-redux-2.0.3-rc.45-alpha.dff261df.tgz#d2e2d95f809a0d0d200a97213bccca086f5f3cd4"
   dependencies:
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.45-alpha.dff261df"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.45-alpha.dff261df"
+    ramda "^0.25.0"
+    react-redux "^5.0.7"
+    redux "4.0.0"
+    redux-thunk "^2.3.0"
+    reselect "^3.0.1"
+
+"@applicaster/zapp-react-native-redux@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-redux/-/zapp-react-native-redux-2.0.3-rc.69.tgz#886f0c9438f7653df1adb13b02d381b3be97366e"
+  dependencies:
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     ramda "^0.25.0"
     react-redux "^5.0.7"
     redux "4.0.0"
@@ -328,15 +347,15 @@
     react-lifecycles-compat "^3.0.4"
     react-router-native "^4.3.0"
 
-"@applicaster/zapp-react-native-tvos-app@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-tvos-app/-/zapp-react-native-tvos-app-2.0.3-rc.65.tgz#8c0e3c1fe7bcb48eebb34cc8df39d44e9c859a73"
+"@applicaster/zapp-react-native-tvos-app@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-tvos-app/-/zapp-react-native-tvos-app-2.0.3-rc.69.tgz#3dd12d26febec53c5506e1f1b328c91ebc751b79"
   dependencies:
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     ramda "^0.26.0"
     react-lifecycles-compat "^3.0.4"
     react-router-native "^4.3.0"
@@ -351,15 +370,15 @@
     "@applicaster/zapp-react-native-tvos-ui-components" "2.0.3-rc.47"
     "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.45"
 
-"@applicaster/zapp-react-native-tvos-cli-template@2.0.3-rc.67":
-  version "2.0.3-rc.67"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-tvos-cli-template/-/zapp-react-native-tvos-cli-template-2.0.3-rc.67.tgz#65e17f21e27f86129a658f1c2000a3d13510ffa4"
+"@applicaster/zapp-react-native-tvos-cli-template@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-tvos-cli-template/-/zapp-react-native-tvos-cli-template-2.0.3-rc.69.tgz#4be0e66fd52fbdab3937eba817b6bbff2e134524"
   dependencies:
     "@applicaster/babel-preset-quick-brick" "2.0.3-rc.39"
-    "@applicaster/quick-brick-core" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-tvos-app" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-tvos-ui-components" "2.0.3-rc.67"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
+    "@applicaster/quick-brick-core" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-tvos-app" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-tvos-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
 
 "@applicaster/zapp-react-native-tvos-default-player@1.0.4":
   version "1.0.4"
@@ -375,17 +394,17 @@
     ramda "^0.26.0"
     uuid "^3.3.2"
 
-"@applicaster/zapp-react-native-tvos-ui-components@2.0.3-rc.67":
-  version "2.0.3-rc.67"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-tvos-ui-components/-/zapp-react-native-tvos-ui-components-2.0.3-rc.67.tgz#95cf46c34717fe121b25483d6a9c58bca05f6d99"
+"@applicaster/zapp-react-native-tvos-ui-components@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-tvos-ui-components/-/zapp-react-native-tvos-ui-components-2.0.3-rc.69.tgz#db35216207fdc2037d1058fc2fa74b9ec0a5ad9a"
   dependencies:
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
     ramda "^0.26.0"
     uuid "^3.3.2"
 
-"@applicaster/zapp-react-native-ui-components@2.0.3-rc.45", "@applicaster/zapp-react-native-ui-components@^2.0.3-rc.31":
+"@applicaster/zapp-react-native-ui-components@2.0.3-rc.45":
   version "2.0.3-rc.45"
   resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-ui-components/-/zapp-react-native-ui-components-2.0.3-rc.45.tgz#508e4826314ad801d884bd40f0ade46ea4bd2aa9"
   dependencies:
@@ -399,13 +418,27 @@
     url "^0.11.0"
     uuid "^3.3.2"
 
-"@applicaster/zapp-react-native-ui-components@2.0.3-rc.65":
-  version "2.0.3-rc.65"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-ui-components/-/zapp-react-native-ui-components-2.0.3-rc.65.tgz#41eabeb436e5c265911bb20f7ab0903c04e013c6"
+"@applicaster/zapp-react-native-ui-components@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-ui-components/-/zapp-react-native-ui-components-2.0.3-rc.69.tgz#5b9ca08b70b5d7138bff201616236186b53de654"
   dependencies:
-    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-redux" "2.0.3-rc.64"
-    "@applicaster/zapp-react-native-utils" "2.0.3-rc.64"
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.69"
+    ramda "^0.25.0"
+    react-lifecycles-compat "^3.0.4"
+    react-native-side-menu "^1.1.3"
+    react-router-native "^4.3.0"
+    url "^0.11.0"
+    uuid "^3.3.2"
+
+"@applicaster/zapp-react-native-ui-components@^2.0.3-rc.31":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-ui-components/-/zapp-react-native-ui-components-2.0.3-rc.45-alpha.dff261df.tgz#02be7f8404914300ace1d1114e40d2730f2ac71f"
+  dependencies:
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.45-alpha.dff261df"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.45-alpha.dff261df"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.45-alpha.dff261df"
     ramda "^0.25.0"
     react-lifecycles-compat "^3.0.4"
     react-native-side-menu "^1.1.3"
@@ -424,9 +457,9 @@
     prop-types "^15.0.0"
     ramda "^0.25.0"
 
-"@applicaster/zapp-react-native-utils@2.0.3-rc.64":
-  version "2.0.3-rc.64"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-utils/-/zapp-react-native-utils-2.0.3-rc.64.tgz#8deb45ead8b9636079f91a841204888073b4e450"
+"@applicaster/zapp-react-native-utils@2.0.3-rc.45-alpha.dff261df":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-utils/-/zapp-react-native-utils-2.0.3-rc.45-alpha.dff261df.tgz#de3c2ac9c78ec68dd5d5e3850eb39e77da292ce2"
   dependencies:
     buffer "^5.2.1"
     camelize "^1.0.0"
@@ -435,14 +468,25 @@
     prop-types "^15.0.0"
     ramda "^0.25.0"
 
-"@applicaster/zapplicaster-cli@2.0.3-rc.68":
-  version "2.0.3-rc.68"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapplicaster-cli/-/zapplicaster-cli-2.0.3-rc.68.tgz#86f97c3bbe68163b232b24314844b7ecc4438d53"
+"@applicaster/zapp-react-native-utils@2.0.3-rc.69":
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-utils/-/zapp-react-native-utils-2.0.3-rc.69.tgz#38cc41c6b51c978566b6a613e75320214adc3717"
   dependencies:
-    "@applicaster/zapp-react-dom-cli-template" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-android-tv-cli-template" "2.0.3-rc.68"
-    "@applicaster/zapp-react-native-cli-template" "2.0.3-rc.65"
-    "@applicaster/zapp-react-native-tvos-cli-template" "2.0.3-rc.67"
+    buffer "^5.2.1"
+    camelize "^1.0.0"
+    create-react-context "^0.2.3"
+    create-react-ref "^0.1.0"
+    prop-types "^15.0.0"
+    ramda "^0.25.0"
+
+"@applicaster/zapplicaster-cli@2.0.3-rc.47":
+  version "2.0.3-rc.47"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapplicaster-cli/-/zapplicaster-cli-2.0.3-rc.47.tgz#70c916c5b2337f7a3c065fd76156339cc57246b3"
+  dependencies:
+    "@applicaster/zapp-react-dom-cli-template" "2.0.3-rc.45"
+    "@applicaster/zapp-react-native-android-tv-cli-template" "2.0.3-rc.45"
+    "@applicaster/zapp-react-native-cli-template" "2.0.3-rc.45"
+    "@applicaster/zapp-react-native-tvos-cli-template" "2.0.3-rc.47"
     aws-sdk "^2.224.1"
     axios "^0.18.0"
     camelize "^1.0.0"
@@ -454,13 +498,13 @@
     shelljs "^0.8.1"
 
 "@applicaster/zapplicaster-cli@^2.0.3-rc.31":
-  version "2.0.3-rc.47"
-  resolved "https://registry.yarnpkg.com/@applicaster/zapplicaster-cli/-/zapplicaster-cli-2.0.3-rc.47.tgz#70c916c5b2337f7a3c065fd76156339cc57246b3"
+  version "2.0.3-rc.69"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapplicaster-cli/-/zapplicaster-cli-2.0.3-rc.69.tgz#0ad8b150301651a1e7e727697613a817bbd45384"
   dependencies:
-    "@applicaster/zapp-react-dom-cli-template" "2.0.3-rc.45"
-    "@applicaster/zapp-react-native-android-tv-cli-template" "2.0.3-rc.45"
-    "@applicaster/zapp-react-native-cli-template" "2.0.3-rc.45"
-    "@applicaster/zapp-react-native-tvos-cli-template" "2.0.3-rc.47"
+    "@applicaster/zapp-react-dom-cli-template" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-android-tv-cli-template" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-cli-template" "2.0.3-rc.69"
+    "@applicaster/zapp-react-native-tvos-cli-template" "2.0.3-rc.69"
     aws-sdk "^2.224.1"
     axios "^0.18.0"
     camelize "^1.0.0"
@@ -1461,8 +1505,8 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
 
 aws-sdk@^2.224.1:
-  version "2.504.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.504.0.tgz#d7111b3f5117548935d68c717d72bbf57a9362f9"
+  version "2.522.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.522.0.tgz#f3419800fad29c03c9344d433c0782c4ad7cf0bb"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -1511,8 +1555,8 @@ babel-plugin-dynamic-import-node@^2.3.0:
     object.assign "^4.1.0"
 
 babel-plugin-react-native-web@^0.11.2:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-native-web/-/babel-plugin-react-native-web-0.11.5.tgz#df22a66991772fb3695279942528d3ae4dcba7af"
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-native-web/-/babel-plugin-react-native-web-0.11.7.tgz#15b578c0731bd7d65d334f9c759d95e8e4a602e2"
 
 babel-plugin-syntax-trailing-function-commas@^7.0.0-beta.0:
   version "7.0.0-beta.0"
@@ -1651,13 +1695,13 @@ braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-browserslist@^4.6.0, browserslist@^4.6.2:
-  version "4.6.6"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.6.6.tgz#6e4bf467cde520bc9dbdf3747dafa03531cec453"
+browserslist@^4.6.0, browserslist@^4.6.6:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.0.tgz#9ee89225ffc07db03409f2fee524dc8227458a17"
   dependencies:
-    caniuse-lite "^1.0.30000984"
-    electron-to-chromium "^1.3.191"
-    node-releases "^1.1.25"
+    caniuse-lite "^1.0.30000989"
+    electron-to-chromium "^1.3.247"
+    node-releases "^1.1.29"
 
 bser@^2.0.0:
   version "2.1.0"
@@ -1681,16 +1725,9 @@ buffer@4.9.1:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
-buffer@^5.1.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.4.0.tgz#33294f5c1f26e08461e528b69fa06de3c45cbd8c"
-  dependencies:
-    base64-js "^1.0.2"
-    ieee754 "^1.1.4"
-
-buffer@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.2.1.tgz#dd57fa0f109ac59c602479044dca7b8b3d0b71d6"
+buffer@^5.1.0, buffer@^5.2.1:
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.4.2.tgz#2012872776206182480eccb2c0fba5f672a2efef"
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -1744,7 +1781,7 @@ camelize@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
 
-caniuse-lite@^1.0.30000984:
+caniuse-lite@^1.0.30000989:
   version "1.0.30000989"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000989.tgz#b9193e293ccf7e4426c5245134b8f2a56c0ac4b9"
 
@@ -1937,16 +1974,11 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
 core-js-compat@^3.1.1:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.1.4.tgz#e4d0c40fbd01e65b1d457980fe4112d4358a7408"
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.2.1.tgz#0cbdbc2e386e8e00d3b85dc81c848effec5b8150"
   dependencies:
-    browserslist "^4.6.2"
-    core-js-pure "3.1.4"
-    semver "^6.1.1"
-
-core-js-pure@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.1.4.tgz#5fa17dc77002a169a3566cc48dc774d2e13e3769"
+    browserslist "^4.6.6"
+    semver "^6.3.0"
 
 core-js@^1.0.0:
   version "1.2.7"
@@ -1957,8 +1989,8 @@ core-js@^2.2.2, core-js@^2.4.1:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
 
 core-js@^3.0.0:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.1.4.tgz#3a2837fc48e582e1ae25907afcd6cf03b0cc7a07"
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -2119,9 +2151,9 @@ ejs@2.5.6:
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.6.tgz#479636bfa3fe3b1debd52087f0acb204b4f19c88"
 
-electron-to-chromium@^1.3.191:
-  version "1.3.215"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.215.tgz#c833cb31110c2e0a7dade1110648c2174f75233b"
+electron-to-chromium@^1.3.247:
+  version "1.3.252"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.252.tgz#5b6261965b564a0f4df0f1c86246487897017f52"
 
 emitter-component@^1.1.1:
   version "1.1.1"
@@ -2165,15 +2197,19 @@ errorhandler@^1.5.0:
     escape-html "~1.0.3"
 
 es-abstract@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.13.0.tgz#ac86145fdd5099d8dd49558ccba2eaf9b88e24e9"
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.14.1.tgz#6e8d84b445ec9c610781e74a6d52cc31aac5b4ca"
   dependencies:
     es-to-primitive "^1.2.0"
     function-bind "^1.1.1"
     has "^1.0.3"
+    has-symbols "^1.0.0"
     is-callable "^1.1.4"
     is-regex "^1.0.4"
-    object-keys "^1.0.12"
+    object-inspect "^1.6.0"
+    object-keys "^1.1.1"
+    string.prototype.trimleft "^2.0.0"
+    string.prototype.trimright "^2.0.0"
 
 es-to-primitive@^1.2.0:
   version "1.2.0"
@@ -2520,7 +2556,7 @@ fsevents@^1.2.3:
     nan "^2.12.1"
     node-pre-gyp "^0.12.0"
 
-function-bind@^1.1.1:
+function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
@@ -2612,8 +2648,8 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.1.tgz#1c1f0c364882c868f5bff6512146328336a11b1d"
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.2.tgz#6f0952605d0140c1cfdb138ed005775b92d67b02"
 
 growly@^1.3.0:
   version "1.3.0"
@@ -2734,10 +2770,8 @@ hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
     react-is "^16.7.0"
 
 hosted-git-info@^2.1.4:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.2.tgz#a35c3f355ac1249f1093c0c2a542ace8818c171a"
-  dependencies:
-    lru-cache "^5.1.1"
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.4.tgz#44119abaf4bc64692a16ace34700fed9c03e2546"
 
 http-errors@~1.7.2:
   version "1.7.3"
@@ -3305,12 +3339,6 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
-  dependencies:
-    yallist "^3.0.2"
-
 m3u8-parser@4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/m3u8-parser/-/m3u8-parser-4.3.0.tgz#4b4e988f87b6d8b2401d209a1d17798285a9da04"
@@ -3866,9 +3894,13 @@ micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-mime-db@1.40.0, mime-db@1.x.x, "mime-db@>= 1.40.0 < 2":
+mime-db@1.40.0:
   version "1.40.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.40.0.tgz#a65057e998db090f732a68f6c276d387d4126c32"
+
+mime-db@1.x.x, "mime-db@>= 1.40.0 < 2":
+  version "1.41.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.41.0.tgz#9110408e1f6aa1b34aef51f2c9df3caddf46b6a0"
 
 mime-db@~1.23.0:
   version "1.23.0"
@@ -3926,8 +3958,8 @@ minimist@~0.0.1:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
 minipass@^2.2.1, minipass@^2.3.5:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.3.5.tgz#cacebe492022497f656b0f0f51e2682a9ed2d848"
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.5.0.tgz#dddb1d001976978158a05badfcbef4a771612857"
   dependencies:
     safe-buffer "^5.1.2"
     yallist "^3.0.0"
@@ -3997,8 +4029,8 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
 
 nanoid@^2.0.0:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.4.tgz#4889355c9ce8e24efad7c65945a4a2875ac3e8f4"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.0.tgz#3de3dbd68cfb2f3bd52550e2bfd439cf75040eb2"
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -4065,8 +4097,8 @@ node-modules-regexp@^1.0.0:
   resolved "https://registry.yarnpkg.com/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz#8d9dbe28964a4ac5712e9131642107c71e90ec40"
 
 node-notifier@^5.2.1:
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/node-notifier/-/node-notifier-5.4.1.tgz#7c0192cc63aedb25cd99619174daa27902b10903"
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/node-notifier/-/node-notifier-5.4.3.tgz#cb72daf94c93904098e28b9c590fd866e464bd50"
   dependencies:
     growly "^1.3.0"
     is-wsl "^1.1.0"
@@ -4089,9 +4121,9 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.1.25:
-  version "1.1.26"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.26.tgz#f30563edc5c7dc20cf524cc8652ffa7be0762937"
+node-releases@^1.1.29:
+  version "1.1.29"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.29.tgz#86a57c6587a30ecd6726449e5d293466b0a0bb86"
   dependencies:
     semver "^5.3.0"
 
@@ -4171,7 +4203,11 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-keys@^1.0.11, object-keys@^1.0.12:
+object-inspect@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.6.0.tgz#c70b6cbf72f274aab4c34c0c82f5167bf82cf15b"
+
+object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
 
@@ -4276,8 +4312,8 @@ p-limit@^1.1.0:
     p-try "^1.0.0"
 
 p-limit@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.0.tgz#417c9941e6027a9abcba5092dd2904e255b5fbc2"
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.1.tgz#aa07a788cc3151c939b5131f63570f0dd2009537"
   dependencies:
     p-try "^2.0.0"
 
@@ -4528,8 +4564,8 @@ query-string@5.0.0:
     strict-uri-encode "^1.0.0"
 
 query-string@^6.1.0:
-  version "6.8.2"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.2.tgz#36cb7e452ae11a4b5e9efee83375e0954407b2f6"
+  version "6.8.3"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.3.tgz#fd9fb7ffb068b79062b43383685611ee47777d4b"
   dependencies:
     decode-uri-component "^0.2.0"
     split-on-first "^1.0.0"
@@ -4547,7 +4583,7 @@ ramda@0.25.0, ramda@^0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
 
-ramda@^0.26.0, ramda@^0.26.1:
+ramda@^0.26.0:
   version "0.26.1"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
 
@@ -4592,8 +4628,8 @@ react-devtools-core@^3.4.0, react-devtools-core@^3.6.0:
     ws "^3.3.1"
 
 react-hot-loader@^4.12.5, react-hot-loader@^4.3.8:
-  version "4.12.10"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.10.tgz#b3457c0f733423c4827c6d2672e50c9f8bedaf6b"
+  version "4.12.12"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.12.tgz#8b33f59efef8a34f64e01f0d9393230d4b4bc6d4"
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
@@ -4605,8 +4641,8 @@ react-hot-loader@^4.12.5, react-hot-loader@^4.3.8:
     source-map "^0.7.3"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
@@ -4869,7 +4905,7 @@ redux@4.0.0:
     loose-envify "^1.1.0"
     symbol-observable "^1.2.0"
 
-regenerate-unicode-properties@^8.0.2:
+regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
   dependencies:
@@ -4907,15 +4943,15 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     safe-regex "^1.1.0"
 
 regexp-tree@^0.1.6:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.11.tgz#c9c7f00fcf722e0a56c7390983a7a63dd6c272f3"
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.13.tgz#5b19ab9377edc68bc3679256840bb29afc158d7f"
 
 regexpu-core@^4.5.4:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.5.4.tgz#080d9d02289aa87fe1667a4f5136bc98a6aebaae"
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.5.5.tgz#aaffe61c2af58269b3e516b61a73790376326411"
   dependencies:
     regenerate "^1.4.0"
-    regenerate-unicode-properties "^8.0.2"
+    regenerate-unicode-properties "^8.1.0"
     regjsgen "^0.5.0"
     regjsparser "^0.6.0"
     unicode-match-property-ecmascript "^1.0.4"
@@ -5002,8 +5038,8 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
 rimraf@^2.5.4, rimraf@^2.6.1:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
   dependencies:
     glob "^7.1.3"
 
@@ -5114,9 +5150,9 @@ sc-channel@^1.2.0:
   dependencies:
     component-emitter "1.2.1"
 
-sc-errors@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/sc-errors/-/sc-errors-1.4.1.tgz#53e80030fe647e133d73b51eaa7d2b0f7591fd5b"
+sc-errors@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/sc-errors/-/sc-errors-2.0.1.tgz#3af2d934dfd82116279a4b2c1552c1e021ddcb03"
 
 sc-formatter@^3.0.1:
   version "3.0.2"
@@ -5137,10 +5173,10 @@ scheduler@^0.13.3:
     object-assign "^4.1.1"
 
 "semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz#790a7cf6fea5459bac96110b29b60412dc8ff96b"
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
 
-semver@^6.1.1:
+semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
 
@@ -5210,7 +5246,7 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
-shell-quote@1.6.1, shell-quote@^1.6.1:
+shell-quote@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.6.1.tgz#f4781949cce402697127430ea3b3c5476f481767"
   dependencies:
@@ -5218,6 +5254,10 @@ shell-quote@1.6.1, shell-quote@^1.6.1:
     array-map "~0.0.0"
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
+
+shell-quote@^1.6.1:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
 
 shelljs@^0.8.1:
   version "0.8.3"
@@ -5300,8 +5340,8 @@ snapdragon@^0.8.1:
     use "^3.1.0"
 
 socketcluster-client@^14.2.1:
-  version "14.3.0"
-  resolved "https://registry.yarnpkg.com/socketcluster-client/-/socketcluster-client-14.3.0.tgz#de56e90b76f226ff691ec137f1e748d7365124b9"
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/socketcluster-client/-/socketcluster-client-14.3.1.tgz#bfc3591c0cad2668e7b3512a102f3844f5f2e84d"
   dependencies:
     buffer "^5.2.1"
     clone "2.1.1"
@@ -5309,7 +5349,7 @@ socketcluster-client@^14.2.1:
     linked-list "0.1.0"
     querystring "0.2.0"
     sc-channel "^1.2.0"
-    sc-errors "^1.4.1"
+    sc-errors "^2.0.1"
     sc-formatter "^3.0.1"
     uuid "3.2.1"
     ws "7.1.0"
@@ -5452,6 +5492,20 @@ string.prototype.trim@^1.1.2:
     define-properties "^1.1.3"
     es-abstract "^1.13.0"
     function-bind "^1.1.1"
+
+string.prototype.trimleft@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/string.prototype.trimleft/-/string.prototype.trimleft-2.0.0.tgz#68b6aa8e162c6a80e76e3a8a0c2e747186e271ff"
+  dependencies:
+    define-properties "^1.1.2"
+    function-bind "^1.0.2"
+
+string.prototype.trimright@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/string.prototype.trimright/-/string.prototype.trimright-2.0.0.tgz#ab4a56d802a01fbe7293e11e84f24dc8164661dd"
+  dependencies:
+    define-properties "^1.1.2"
+    function-bind "^1.0.2"
 
 string_decoder@~1.1.1:
   version "1.1.1"
@@ -5734,9 +5788,13 @@ uuid@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
 
-uuid@3.3.2, uuid@^3.3.2:
+uuid@3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+
+uuid@^3.3.2:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
@@ -5955,7 +6013,7 @@ yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
-yallist@^3.0.0, yallist@^3.0.2, yallist@^3.0.3:
+yallist@^3.0.0, yallist@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
 

@@ -6,11 +6,11 @@
   "react_native": true,
   "dependency_repository_url": [],
   "dependency_name": "@applicaster/quick-brick-oc-login-plugin",
-  "dependency_version": "0.0.9",
+  "dependency_version": "0.0.10",
   "platform": "samsung_tv",
   "author_name": "Applicaster",
   "author_email": "zapp@applicaster.com",
-  "manifest_version": "0.0.9",
+  "manifest_version": "0.0.10",
   "name": "QuickBrick OC TV Login",
   "description": "Olympic Channel login with pin and pair",
   "type": "general",
@@ -23,5 +23,29 @@
   "min_zapp_sdk": "1.0.0",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
+  "preload": true,
+  "general": {
+    "fields": [
+      {
+        "type": "switch",
+        "key": "is_flow_blocker",
+        "tooltip_text": "Define if hook will block flow in case cancelation",
+        "initial_value": true
+      },
+      {
+        "type": "switch",
+        "key": "allow_screen_plugin_presentation",
+        "tooltip_text": "Define if",
+        "initial_value": true
+      }
+    ]
+  },
+  "custom_configuration_fields": [
+    {
+      "key": "expected_token",
+      "type": "text",
+      "tooltip_text": "sets the value the plugin expects to simulate a valid login"
+    }
+  ],
   "targets": ["tv"]
 }

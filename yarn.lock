@@ -150,7 +150,14 @@
     react-router-native "^4.3.0"
     url "^0.11.0"
 
-"@applicaster/zapp-react-native-bridge@2.0.3-rc.69", "@applicaster/zapp-react-native-bridge@^2.0.3-rc.69":
+"@applicaster/zapp-react-native-bridge@2.0.3-rc.45-alpha.dff261df", "@applicaster/zapp-react-native-bridge@^2.0.3-rc.69":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-bridge/-/zapp-react-native-bridge-2.0.3-rc.45-alpha.dff261df.tgz#def0c594527e88021e39650a8efd2a78de18cc9d"
+  dependencies:
+    "@applicaster/zapp-pipes-dev-kit" "1.3.0"
+    uuid "^3.3.2"
+
+"@applicaster/zapp-react-native-bridge@2.0.3-rc.69":
   version "2.0.3-rc.69"
   resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-bridge/-/zapp-react-native-bridge-2.0.3-rc.69.tgz#bd0b2d27f9cffaacf0a19fdf5ac07a0b41e9ecaa"
   dependencies:
@@ -166,6 +173,18 @@
     "@applicaster/zapp-react-native-app" "2.0.3-rc.69"
     "@applicaster/zapp-react-native-bridge" "2.0.3-rc.69"
     "@applicaster/zapp-react-native-ui-components" "2.0.3-rc.69"
+
+"@applicaster/zapp-react-native-redux@2.0.3-rc.45-alpha.dff261df":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-redux/-/zapp-react-native-redux-2.0.3-rc.45-alpha.dff261df.tgz#d2e2d95f809a0d0d200a97213bccca086f5f3cd4"
+  dependencies:
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.45-alpha.dff261df"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.45-alpha.dff261df"
+    ramda "^0.25.0"
+    react-redux "^5.0.7"
+    redux "4.0.0"
+    redux-thunk "^2.3.0"
+    reselect "^3.0.1"
 
 "@applicaster/zapp-react-native-redux@2.0.3-rc.69":
   version "2.0.3-rc.69"
@@ -212,7 +231,7 @@
     ramda "^0.26.0"
     uuid "^3.3.2"
 
-"@applicaster/zapp-react-native-ui-components@2.0.3-rc.69", "@applicaster/zapp-react-native-ui-components@^2.0.3-rc.69":
+"@applicaster/zapp-react-native-ui-components@2.0.3-rc.69":
   version "2.0.3-rc.69"
   resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-ui-components/-/zapp-react-native-ui-components-2.0.3-rc.69.tgz#5b9ca08b70b5d7138bff201616236186b53de654"
   dependencies:
@@ -226,6 +245,31 @@
     url "^0.11.0"
     uuid "^3.3.2"
 
+"@applicaster/zapp-react-native-ui-components@^2.0.3-rc.69":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-ui-components/-/zapp-react-native-ui-components-2.0.3-rc.45-alpha.dff261df.tgz#02be7f8404914300ace1d1114e40d2730f2ac71f"
+  dependencies:
+    "@applicaster/zapp-react-native-bridge" "2.0.3-rc.45-alpha.dff261df"
+    "@applicaster/zapp-react-native-redux" "2.0.3-rc.45-alpha.dff261df"
+    "@applicaster/zapp-react-native-utils" "2.0.3-rc.45-alpha.dff261df"
+    ramda "^0.25.0"
+    react-lifecycles-compat "^3.0.4"
+    react-native-side-menu "^1.1.3"
+    react-router-native "^4.3.0"
+    url "^0.11.0"
+    uuid "^3.3.2"
+
+"@applicaster/zapp-react-native-utils@2.0.3-rc.45-alpha.dff261df":
+  version "2.0.3-rc.45-alpha.dff261df"
+  resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-utils/-/zapp-react-native-utils-2.0.3-rc.45-alpha.dff261df.tgz#de3c2ac9c78ec68dd5d5e3850eb39e77da292ce2"
+  dependencies:
+    buffer "^5.2.1"
+    camelize "^1.0.0"
+    create-react-context "^0.2.3"
+    create-react-ref "^0.1.0"
+    prop-types "^15.0.0"
+    ramda "^0.25.0"
+
 "@applicaster/zapp-react-native-utils@2.0.3-rc.69":
   version "2.0.3-rc.69"
   resolved "https://registry.yarnpkg.com/@applicaster/zapp-react-native-utils/-/zapp-react-native-utils-2.0.3-rc.69.tgz#38cc41c6b51c978566b6a613e75320214adc3717"
@@ -237,7 +281,7 @@
     prop-types "^15.0.0"
     ramda "^0.25.0"
 
-"@applicaster/zapplicaster-cli@2.0.3-rc.69", "@applicaster/zapplicaster-cli@^2.0.3-rc.31":
+"@applicaster/zapplicaster-cli@2.0.3-rc.69", "@applicaster/zapplicaster-cli@^2.0.3-rc.69":
   version "2.0.3-rc.69"
   resolved "https://registry.yarnpkg.com/@applicaster/zapplicaster-cli/-/zapplicaster-cli-2.0.3-rc.69.tgz#0ad8b150301651a1e7e727697613a817bbd45384"
   dependencies:
@@ -1513,8 +1557,8 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
 
 aws-sdk@^2.224.1:
-  version "2.522.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.522.0.tgz#f3419800fad29c03c9344d433c0782c4ad7cf0bb"
+  version "2.523.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.523.0.tgz#7467f6a41a284f61103c9d2a91eb43537ce5f166"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -6317,21 +6361,6 @@ react-native-side-menu@^1.1.3:
 react-native-web@0.11.5:
   version "0.11.5"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.11.5.tgz#adf2eff902fdb32e86be7877294d9a6bb0ad3815"
-  dependencies:
-    array-find-index "^1.0.2"
-    create-react-class "^15.6.2"
-    debounce "^1.2.0"
-    deep-assign "^3.0.0"
-    fbjs "^1.0.0"
-    hyphenate-style-name "^1.0.2"
-    inline-style-prefixer "^5.0.3"
-    normalize-css-color "^1.0.2"
-    prop-types "^15.6.0"
-    react-timer-mixin "^0.13.4"
-
-react-native-web@^0.11.7:
-  version "0.11.7"
-  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.11.7.tgz#d173d5a9b58db23b6d442c4bc4c81e9939adac23"
   dependencies:
     array-find-index "^1.0.2"
     create-react-class "^15.6.2"

@@ -1,6 +1,7 @@
 // @flow
 import * as React from "react";
 import { View, Text, Dimensions, Image } from "react-native";
+import IconWithTitle from './components/IconWithTitle'
 const { width, height } = Dimensions.get('window');
 
 export class OCLoginPluginComponent extends React.Component {
@@ -10,38 +11,10 @@ export class OCLoginPluginComponent extends React.Component {
         <View style={styles.subContainer}>
           <Text style={styles.title}>Create an account to personalize your Olympic Channel experience</Text>
           <View style={styles.imagesContainer}>
-            <View style={{ ...styles.imgInfo, alignItems: 'center' }}>
-              <Image
-                style={{ width: 120, height: 120 }}
-                resizeMode="contain"
-                source={{ uri: 'https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png' }}
-              />
-              <Text style={styles.imgTitle}>Newsletter</Text>
-            </View>
-            <View style={{ ...styles.imgInfo, alignItems: 'center' }}>
-              <Image
-                style={{ width: 120, height: 120 }}
-                resizeMode="contain"
-                source={{ uri: 'https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png' }}
-              />
-              <Text style={styles.imgTitle}>Favorites</Text>
-            </View>
-            <View style={{ ...styles.imgInfo, alignItems: 'center' }}>
-              <Image
-                style={{ width: 120, height: 120 }}
-                resizeMode="contain"
-                source={{ uri: 'https://assets-production.applicaster.com/static/olympic-channel/images/play.png' }}
-              />
-              <Text style={styles.imgTitle}>Continue Watching</Text>
-            </View>
-            <View style={{ ...styles.imgInfo, alignItems: 'center' }}>
-              <Image
-                style={{ width: 120, height: 120 }}
-                resizeMode="contain"
-                source={{ uri: 'https://assets-production.applicaster.com/static/olympic-channel/images/devices.png' }}
-              />
-              <Text style={styles.imgTitle}>Sync-Accross Devices</Text>
-            </View>
+            <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
+            <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
+            <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/play.png" />
+            <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/devices.png" />
           </View>
           <View style={styles.buttonContainer}>
             <View style={styles.button}>

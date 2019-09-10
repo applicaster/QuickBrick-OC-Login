@@ -9,26 +9,26 @@ class IconWithTitle extends React.Component {
       title
     } = this.props
     return (
-      <View style={styles.imgInfo}>
+      <View style={styles.container}>
         <Image
           style={{ width: size, height: size }}
           resizeMode="contain"
           source={{ uri: imgUrl }}
         />
-        <Text style={styles.imgTitle}>{title}</Text>
+        <Text style={styles.title}>{title}</Text>
       </View>
     );
   }
 }
 
 const styles = {
-  imgInfo: {
+  container: {
+    width: 300,
     justifyContent: 'center',
     alignItems: 'center'
   },
-  imgTitle: {
-    fontFamily: "sans-serif",
-    fontSize: '24px',
+  title: {
+    fontSize: 24,
     fontWeight: 'bold',
     color: "#525A5C",
     marginTop: 50,

@@ -1,22 +1,23 @@
 import * as React from "react";
-import { View, Text, Dimensions } from "react-native";
+import { View, Text, Dimensions, ImageBackground } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
 import IconWithTitle from '../components/IconWithTitle'
 import Button from "../components/Button";
+import BGImage from "../../static/bg.png"
 
 const { width, height } = Dimensions.get('window');
 
 class IntroScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ImageBackground source={BGImage} style={styles.container}>
         <View style={styles.subContainer}>
           <Text style={styles.title}>Create an account to personalize your Olympic Channel experience</Text>
           <View style={styles.iconsContainer}>
             <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
             <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
-            <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/play.png" />
-            <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/devices.png" />
+            <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/continue-watching.png" />
+            <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/sync-devices.png" />
           </View>
           <View style={styles.buttonContainer}>
             <FocusableGroup id={'sign-in-button'}>
@@ -24,7 +25,7 @@ class IntroScreen extends React.Component {
             </FocusableGroup>
           </View>
         </View>
-      </View>
+      </ImageBackground>
     );
   }
 }
@@ -41,7 +42,6 @@ const styles = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -100
   },
   iconsContainer: {
     alignItems: 'center',
@@ -57,6 +57,7 @@ const styles = {
     marginBottom: 110
   },
   buttonContainer: {
+    marginTop: 150,
     width: '100%',
     height: 200,
     alignItems: 'center',

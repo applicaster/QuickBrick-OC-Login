@@ -5,7 +5,7 @@ class IconWithTitle extends React.Component {
   render() {
     const {
       imgUrl,
-      size = 120,
+      size = 140,
       title
     } = this.props
     return (
@@ -28,7 +28,7 @@ const styles = {
     alignItems: 'center'
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     color: "#525A5C",
     marginTop: 50,

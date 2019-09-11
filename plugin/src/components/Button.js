@@ -18,13 +18,14 @@ export default function Button({ label, groupId, onPress }) {
 }
 
 const button = {
-  width: 500,
+  width: 1000,
   height: 80,
-  backgroundColor: "#D8D8D8",
+  backgroundColor: "#0081C8",
   borderWidth: 1,
-  borderColor: '#979797',
+  borderColor: '#0081C8',
   justifyContent: 'center',
-  alignItems: 'center',
+  alignItems: 'flex-start',
+  paddingLeft: 50,
   marginTop: 100
 };
 
@@ -38,11 +39,11 @@ const styles = {
   focused: {
     button: {
       ...button,
-      backgroundColor: "rgba(255, 255, 255, 0.8)"
+      backgroundColor: "#0081C8"
     },
     buttonText: {
       ...buttonText,
-      color: "#5F5F5F"
+      color: "#ffffff"
     }
   },
   default: {

@@ -45,7 +45,7 @@ class SignInScreen extends React.Component {
             <View style={styles.leftColumn}>
               <Text style={styles.subTitle}>Visit Website</Text>
               <Text style={{ ...styles.text, marginTop: 30 }} adjustsFontSizeToFit>1. To sign in or create an account visit: olympicchannel.com/account</Text>
-              <Text style={{ ...styles.text, marginBottom: 20 }} adjustsFontSizeToFit>2. When prompted, enter the code below:</Text>
+              <Text style={{ ...styles.text, marginBottom: 60 }} adjustsFontSizeToFit>2. When prompted, enter the code below:</Text>
               {
                 this.state.loading
                   ? <ActivityIndicator size="small" color="#525A5C" />
@@ -84,7 +84,6 @@ const styles = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -100
   },
   title: {
     color: "#525A5C",

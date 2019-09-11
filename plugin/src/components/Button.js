@@ -20,17 +20,15 @@ export default function Button({ label, groupId, onPress }) {
 const button = {
   width: 1000,
   height: 80,
-  backgroundColor: "#0081C8",
-  borderWidth: 1,
-  borderColor: '#0081C8',
+  backgroundColor: "#D8D8D8",
   justifyContent: 'center',
   alignItems: 'flex-start',
   paddingLeft: 50,
-  marginTop: 100
+  marginBottom: 20,
 };
 
 const buttonText = {
-  color: "#525A5C",
+  color: "#5D5D5D",
   fontSize: 24,
   fontWeight: 'bold'
 };

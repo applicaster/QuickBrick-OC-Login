@@ -17,7 +17,7 @@ class SignInScreen extends React.Component {
   }
 
   componentDidMount() {
-    axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/api/Device/CreateDevice',
+    axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/CreateDevice',
       {
         "deviceId": getAppData().uuid
       },

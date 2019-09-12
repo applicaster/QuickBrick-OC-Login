@@ -31,7 +31,7 @@ class IntroScreen extends React.Component {
           <View style={styles.buttonContainer}>
             <FocusableGroup id={'sign-in-button'}>
               <Button label="Sign In / Register" groupId={'sign-in-button'} onPress={() => this.props.goToScreen("SIGNIN")} />
-              <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.props.goToScreen("SIGNIN")} />
+              <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.props.closeHook({ success: true })} />
             </FocusableGroup>
           </View>
         </View>
@@ -53,6 +53,8 @@ const styles = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingRight: '10%',
+    marginTop: 65,
   },
   iconsContainer: {
     alignItems: 'center',
@@ -60,22 +62,22 @@ const styles = {
     flexDirection: 'row',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: 110,
-    marginBottom: 110,
+    marginTop: 50,
+    marginBottom: 80,
   },
   title: {
     color: "#525A5C",
-    fontSize: 36,
+    fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 30
   },
   subTitle: {
     color: "#525A5C",
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
   },
   buttonContainer: {
-    marginTop: 80,
+    marginTop: 50,
     width: '100%',
     height: 200,
     alignItems: 'center',

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Dimensions, View, ImageBackground, Image } from "react-native";
-import BGImage from "../../static/bg.png"
+import BGImage from "../../static/oc-bg.png"
 import OCLogo from "../../static/oc-logo.png"
 
 const { width, height } = Dimensions.get('window');
@@ -17,7 +17,7 @@ class Layout extends Component {
           />
         </View>
         <View style={styles.subContainer}>
-          {this.props.content}
+          {this.props.children}
         </View>
       </ImageBackground>
     );

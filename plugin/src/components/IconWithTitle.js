@@ -5,13 +5,14 @@ class IconWithTitle extends React.Component {
   render() {
     const {
       imgUrl,
-      size = 140,
+      imgSize = 130,
+      containerSize = 240,
       title
     } = this.props
     return (
-      <View style={styles.container}>
+      <View style={{...styles.container, width: containerSize}}>
         <Image
-          style={{ width: size, height: size }}
+          style={{ width: imgSize, height: imgSize }}
           resizeMode="contain"
           source={{ uri: imgUrl }}
         />
@@ -23,15 +24,13 @@ class IconWithTitle extends React.Component {
 
 const styles = {
   container: {
-    width: 300,
     justifyContent: 'center',
     alignItems: 'center'
   },
   title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 24,
     color: "#525A5C",
-    marginTop: 50,
+    marginTop: 25,
   }
 };
 

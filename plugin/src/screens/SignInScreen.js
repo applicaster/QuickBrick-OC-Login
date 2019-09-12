@@ -35,7 +35,7 @@ class SignInScreen extends React.Component {
 
   render() {
     return (
-      <Layout content={
+      <Layout>
         <React.Fragment>
           <Text style={styles.title}>
             SIGN IN INTO YOUR OLYMPIC CHANNEL ACCOUNT
@@ -53,7 +53,7 @@ class SignInScreen extends React.Component {
               </Text>
               {
                 this.state.loading
-                  ? <ActivityIndicator size="small" color="#525A5C" />
+                  ? <View style={styles.pinCodeSpinner}><ActivityIndicator size="small" color="#525A5C" /></View>
                   : <Text style={styles.pinCode} adjustsFontSizeToFit>{this.state.devicePinCode}</Text>
               }
             </View>
@@ -68,7 +68,7 @@ class SignInScreen extends React.Component {
             </View>
           </View>
         </React.Fragment>
-      } />
+      </Layout>
     );
   }
 }
@@ -96,15 +96,17 @@ const styles = {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'flex-start',
-    borderRightColor: '#D8D8D8',
-    borderRightWidth: 1
+    borderRightColor: '#979797',
+    borderRightWidth: 2,
+    minHeight: 330
   },
   rightColumn: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderLeftColor: '#D8D8D8',
-    borderLeftWidth: 1
+    borderLeftColor: '#979797',
+    borderLeftWidth: 2,
+    minHeight: 330
   },
   loadContainer: {
     width: 300,
@@ -116,6 +118,11 @@ const styles = {
     fontSize: 72,
     color: "#525A5C",
     fontWeight: 'bold'
+  },
+  pinCodeSpinner:{
+    width: 500,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 };
 

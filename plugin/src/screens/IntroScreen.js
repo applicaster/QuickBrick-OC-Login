@@ -3,23 +3,13 @@ import { View, Text, Dimensions, ImageBackground, Image } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
 import IconWithTitle from '../components/IconWithTitle'
 import Button from "../components/Button";
-import BGImage from "../../static/bg.png"
-import OCLogo from "../../static/oc-logo.png"
-
-const { width, height } = Dimensions.get('window');
+import Layout from "../components/Layout";
 
 class IntroScreen extends React.Component {
   render() {
     return (
-      <ImageBackground source={BGImage} style={styles.container}>
-        <View style={{paddingLeft: '5%'}}>
-          <Image
-            style={{ width: 325, height: 325, marginTop: -100, paddingLeft: '16%' }}
-            resizeMode="contain"
-            source={OCLogo}
-          />
-        </View>
-        <View style={styles.subContainer}>
+      <Layout>
+        <View style={styles.container}>
           <Text style={styles.title}>WELCOME TO THE OLYMPIC CHANNEL</Text>
           <Text style={styles.subTitle}>Create an account to personalize your Olympic Channel experience</Text>
           <View style={styles.iconsContainer}>
@@ -35,49 +25,37 @@ class IntroScreen extends React.Component {
             </FocusableGroup>
           </View>
         </View>
-      </ImageBackground>
+      </Layout>
     );
   }
 }
 
 const styles = {
   container: {
-    width,
-    height,
-    backgroundColor: "#E2E2E2",
+    width: 1100,
     alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row'
-  },
-  subContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingRight: '10%',
-    marginTop: 65,
+    justifyContent: 'center'
   },
   iconsContainer: {
+    width: 1100,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    marginLeft: 'auto',
-    marginRight: 'auto',
     marginTop: 50,
-    marginBottom: 80,
+    marginBottom: 90,
   },
   title: {
     color: "#525A5C",
-    fontSize: 40,
+    fontSize: 42,
     fontWeight: 'bold',
     marginBottom: 30
   },
   subTitle: {
     color: "#525A5C",
-    fontSize: 28,
-    fontWeight: 'bold',
+    fontSize: 32,
   },
   buttonContainer: {
-    marginTop: 50,
+    marginTop: 20,
     width: '100%',
     height: 200,
     alignItems: 'center',

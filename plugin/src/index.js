@@ -24,7 +24,7 @@ export class OCLoginPluginComponent extends React.Component {
   renderScreen(screen) {
     switch (screen) {
       case 'INTRO': {
-        return <IntroScreen goToScreen={this.goToScreen}/>;
+        return <IntroScreen goToScreen={this.goToScreen} closeHook={this.props.callback}/>;
       }
       case 'SIGNIN': {
         return <SignInScreen goToScreen={this.goToScreen}/>

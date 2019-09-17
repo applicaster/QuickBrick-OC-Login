@@ -1,6 +1,7 @@
 import * as React from "react";
-import { View, Text, ActivityIndicator, Image } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
 import { getAppData } from "@applicaster/zapp-react-native-bridge/QuickBrick";
+import { sessionStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/SessionStorage";
 import axios from "axios";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
@@ -12,6 +13,8 @@ class SignInScreen extends React.Component {
       devicePinCode: '',
       loading: true
     };
+
+    this.getSignInStatus = this.getSignInStatus.bind(this);
   }
 
   componentDidMount() {
@@ -29,7 +32,31 @@ class SignInScreen extends React.Component {
       this.setState({
         devicePinCode: response.data.devicePinCode,
         loading: false
-      })
+      }, () => this.heartbeat = setInterval(() => {
+        this.getSignInStatus()
+      }, 10000));
+    }).catch(err => console.log(err))
+  }
+
+  getSignInStatus() {
+    axios.get(`https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
+      {
+        headers: {
+          "accept": "application/json"
+        }
+      }
+    ).then(async response => {
+      if (response.data.access_token) {
+        await sessionStorage.setItem(
+          this.props.token,
+          response.data.access_token,
+          this.props.namespace
+        )
+          .then(() => {
+            this.props.closeHook({ success: true })
+          })
+          .catch(err => console.log(err))
+      }
     }).catch(err => console.log(err))
   }
 
@@ -119,7 +146,7 @@ const styles = {
     color: "#525A5C",
     fontWeight: 'bold'
   },
-  pinCodeSpinner:{
+  pinCodeSpinner: {
     width: 500,
     alignItems: 'center',
     justifyContent: 'center'

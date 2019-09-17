@@ -1,11 +1,11 @@
 import * as React from "react";
-import { View, Text, Dimensions, ImageBackground, Image } from "react-native";
+import { View, Text } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
 import IconWithTitle from '../components/IconWithTitle'
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 
-class IntroScreen extends React.Component {
+class IntroScreen extends React.Component {  
   render() {
     return (
       <Layout>

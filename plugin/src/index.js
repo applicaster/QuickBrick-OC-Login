@@ -1,18 +1,20 @@
 // @flow
 import * as React from "react";
-import IntroScreen from './screens/IntroScreen'
+import IntroScreen from './screens/IntroScreen';
 import SignInScreen from './screens/SignInScreen';
+import LoadingScreen from './screens/LoadingScreen';
 import { sessionStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/SessionStorage";
 
 const NAMESPACE = "quick-brick-oc-login-plugin";
 const TOKEN = 'oc_access_token';
+const SKIP = 'skip-prehook'
 
 export class OCLoginPluginComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      screen: 'INTRO'
+      screen: 'LOADING'
     };
 
     this.renderScreen = this.renderScreen.bind(this);
@@ -26,8 +28,14 @@ export class OCLoginPluginComponent extends React.Component {
 
   async checkTokenStatus() {
     const accessToken = await sessionStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err));
-    if (accessToken) {
+    const skipPrehook = await sessionStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err));
+
+    if (accessToken || skipPrehook) {
       this.props.callback({ success: true })
+    } else {
+      this.setState({
+        screen: 'INTRO'
+      })
     }
   }
 
@@ -39,8 +47,18 @@ export class OCLoginPluginComponent extends React.Component {
 
   renderScreen(screen) {
     switch (screen) {
+      case 'LOADING': {
+        return <LoadingScreen 
+          goToScreen={this.goToScreen} 
+        />;
+      }
       case 'INTRO': {
-        return <IntroScreen goToScreen={this.goToScreen} closeHook={this.props.callback} />;
+        return <IntroScreen 
+          goToScreen={this.goToScreen} 
+          closeHook={this.props.callback}
+          namespace={NAMESPACE}
+          skip={SKIP}
+        />;
       }
       case 'SIGNIN': {
         return <SignInScreen

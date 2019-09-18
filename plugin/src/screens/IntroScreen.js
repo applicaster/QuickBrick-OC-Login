@@ -1,11 +1,29 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
+import { sessionStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/SessionStorage";
 import IconWithTitle from '../components/IconWithTitle'
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 
-class IntroScreen extends React.Component {  
+class IntroScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.skipPrehook = this.skipPrehook.bind(this);
+  }
+
+  async skipPrehook() {
+    await sessionStorage.setItem(
+      this.props.skip,
+      true,
+      this.props.namespace
+    )
+      .then(() => {
+        this.props.closeHook({ success: true })
+      })
+      .catch(err => console.log(err))
+  }
+ 
   render() {
     return (
       <Layout>
@@ -21,7 +39,7 @@ class IntroScreen extends React.Component {
           <View style={styles.buttonContainer}>
             <FocusableGroup id={'sign-in-button'}>
               <Button label="Sign In / Register" groupId={'sign-in-button'} onPress={() => this.props.goToScreen("SIGNIN")} />
-              <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.props.closeHook({ success: true })} />
+              <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.skipPrehook()} />
             </FocusableGroup>
           </View>
         </View>

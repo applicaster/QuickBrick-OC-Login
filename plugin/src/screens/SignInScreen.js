@@ -1,7 +1,7 @@
 import * as React from "react";
 import { View, Text, ActivityIndicator } from "react-native";
 import { getAppData } from "@applicaster/zapp-react-native-bridge/QuickBrick";
-import { sessionStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/SessionStorage";
+import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
 import axios from "axios";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
@@ -47,7 +47,7 @@ class SignInScreen extends React.Component {
       }
     ).then(async response => {
       if (response.data.access_token) {
-        await sessionStorage.setItem(
+        await localStorage.setItem(
           this.props.token,
           response.data.access_token,
           this.props.namespace

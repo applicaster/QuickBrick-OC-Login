@@ -1,7 +1,7 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
-import { sessionStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/SessionStorage";
+import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
 import IconWithTitle from '../components/IconWithTitle'
 import Button from "../components/Button";
 import Layout from "../components/Layout";
@@ -13,7 +13,7 @@ class IntroScreen extends React.Component {
   }
 
   async skipPrehook() {
-    await sessionStorage.setItem(
+    await localStorage.setItem(
       this.props.skip,
       true,
       this.props.namespace

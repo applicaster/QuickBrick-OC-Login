@@ -3,7 +3,7 @@ import * as React from "react";
 import IntroScreen from './screens/IntroScreen';
 import SignInScreen from './screens/SignInScreen';
 import LoadingScreen from './screens/LoadingScreen';
-import { sessionStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/SessionStorage";
+import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
 
 const NAMESPACE = "quick-brick-oc-login-plugin";
 const TOKEN = 'oc_access_token';
@@ -27,8 +27,8 @@ export class OCLoginPluginComponent extends React.Component {
   }
 
   async checkTokenStatus() {
-    const accessToken = await sessionStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err));
-    const skipPrehook = await sessionStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err));
+    const accessToken = await localStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err));
+    const skipPrehook = await localStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err));
 
     if (accessToken || skipPrehook) {
       this.props.callback({ success: true })

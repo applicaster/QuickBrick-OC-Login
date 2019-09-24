@@ -8,12 +8,12 @@ const { width, height } = Dimensions.get('window');
 class Layout extends Component {
   render() {
     return (
-      <ImageBackground source={BGImage} style={styles.container}>
+      <ImageBackground source={{ uri: "https://assets-production.applicaster.com/static/olympic-channel/images/oc-bg.png"}} style={styles.container}>
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
             resizeMode="contain"
-            source={OCLogo}
+            source={{ uri: "https://assets-production.applicaster.com/static/olympic-channel/images/oc-logo.png" }}
           />
         </View>
         <View style={styles.subContainer}>

@@ -38,6 +38,10 @@ class SignInScreen extends React.Component {
     }).catch(err => console.log(err))
   }
 
+  componentWillUnmount() {
+    clearInterval(this.heartbeat)
+  }
+
   getSignInStatus() {
     axios.get(`https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
       {

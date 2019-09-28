@@ -23,21 +23,25 @@ class IntroScreen extends React.Component {
       })
       .catch(err => console.log(err))
   }
- 
+
   render() {
     return (
       <Layout>
         <View style={styles.container}>
           <Text style={styles.title}>WELCOME TO THE OLYMPIC CHANNEL</Text>
-          <Text style={styles.subTitle}>Create an account to personalize your Olympic Channel experience</Text>
-          <View style={styles.iconsContainer}>
-            <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
-            <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
-            <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/continue-watching.png" />
-            <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/sync-devices.png" />
-          </View>
+          {
+          /*
+            <Text style={styles.subTitle}>Create an account to personalize your Olympic Channel experience</Text>
+            <View style={styles.iconsContainer}>
+              <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
+              <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
+              <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/continue-watching.png" />
+              <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/sync-devices.png" />
+            </View> 
+          */
+          }
           <View style={styles.buttonContainer}>
-            <FocusableGroup id={'sign-in-button'}>
+            <FocusableGroup id={'sign-in-button'} style={{justifyContent: 'center', alignItems: 'center'}}>
               <Button label="Sign In / Register" groupId={'sign-in-button'} onPress={() => this.props.goToScreen("SIGNIN")} />
               <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.skipPrehook()} />
             </FocusableGroup>
@@ -50,9 +54,9 @@ class IntroScreen extends React.Component {
 
 const styles = {
   container: {
-    width: 1100,
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    marginTop: 100
   },
   iconsContainer: {
     width: 1100,
@@ -66,7 +70,7 @@ const styles = {
     color: "#525A5C",
     fontSize: 42,
     fontWeight: 'bold',
-    marginBottom: 30
+    marginBottom: 300
   },
   subTitle: {
     color: "#525A5C",

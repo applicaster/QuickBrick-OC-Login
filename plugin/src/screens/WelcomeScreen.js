@@ -1,14 +1,40 @@
 import * as React from "react";
+import axios from "axios";
 import { View, Text } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
-import IconWithTitle from '../components/IconWithTitle'
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 
 class WelcomeScreen extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleSignOut = this.handleSignOut.bind(this);
+  }
+
+  handleSignOut() {
+    axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/Logout',
+      {
+        "access_token": this.props.accessToken
+      },
+      {
+        headers: {
+          "accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    ).then(async response => {
+      if (response.data.succeeded) {
+        localStorage.setItem(
+          this.props.token,
+          'NOT_SET',
+          this.props.namespace
+        )
+
+        this.props.goToScreen('INTRO') 
+      }
+    }).catch(err => console.log(err))
   }
 
   render() {
@@ -17,16 +43,13 @@ class WelcomeScreen extends React.Component {
         <View style={styles.container}>
           <Text style={styles.text}>Hi <Text style={styles.userName}>{this.props.userName}!</Text></Text>
           <Text style={styles.text}>To update your account please visit <Text style={styles.url}>www.olympicchannel.com/my-profile</Text></Text>
-          <View style={styles.buttonContainer}>
-            <FocusableGroup id={'sign-in-button'} style={{justifyContent: 'center', alignItems: 'center'}}>
-              <Button 
-                label="Sign Out" 
-                groupId={'sign-out-button'} 
-                onPress={() => this.props.goToScreen("INTRO")} 
-                style={styles.signOutBtn}
-              />
-            </FocusableGroup>
-          </View>
+          <FocusableGroup id={'sign-in-button'} style={styles.buttonContainer}>
+            <Button
+              label="Sign Out"
+              groupId={'sign-out-button'}
+              onPress={() => this.handleSignOut()}
+            />
+          </FocusableGroup>
         </View>
       </Layout>
     );
@@ -38,14 +61,6 @@ const styles = {
     flex: 1,
     alignItems: 'flex-start',
     marginTop: 100
-  },
-  iconsContainer: {
-    width: 1100,
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    marginTop: 50,
-    marginBottom: 90,
   },
   text: {
     color: "#525A5C",
@@ -69,13 +84,10 @@ const styles = {
     fontSize: 32,
   },
   buttonContainer: {
-    marginTop: 20,
-    width: '100%',
-    height: 200,
+    marginTop: 80,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
-  },
-  signOutBtn: {
+    justifyContent: 'center',
     alignSelf: 'center'
   }
 };

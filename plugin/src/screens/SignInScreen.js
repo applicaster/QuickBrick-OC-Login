@@ -6,6 +6,8 @@ import axios from "axios";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
 
+const HEARBEAT_INTERVAL = 5000;
+
 class SignInScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +36,7 @@ class SignInScreen extends React.Component {
         loading: false
       }, () => this.heartbeat = setInterval(() => {
         this.getSignInStatus()
-      }, 10000));
+      }, HEARBEAT_INTERVAL));
     }).catch(err => console.log(err))
   }
 
@@ -56,10 +58,14 @@ class SignInScreen extends React.Component {
           response.data.access_token,
           this.props.namespace
         )
-          .then(() => {
-            this.props.closeHook({ success: true })
-          })
-          .catch(err => console.log(err))
+
+        await localStorage.setItem(
+          this.props.userName,
+          response.data.firstname,
+          this.props.namespace
+        )
+
+        this.props.closeHook({ success: true })
       }
     }).catch(err => console.log(err))
   }
@@ -67,7 +73,7 @@ class SignInScreen extends React.Component {
   render() {
     return (
       <Layout>
-        <React.Fragment>
+        <View style={styles.container}>
           <Text style={styles.title}>
             SIGN IN INTO YOUR OLYMPIC CHANNEL ACCOUNT
           </Text>
@@ -76,7 +82,7 @@ class SignInScreen extends React.Component {
               <Text style={styles.text} adjustsFontSizeToFit>
                 Go to:
               </Text>
-              <Text style={{ ...styles.text, fontWeight: 'bold', fontSize: 36, marginBottom: 60 }} adjustsFontSizeToFit>
+              <Text style={{ ...styles.text, ...styles.url }} adjustsFontSizeToFit>
                 olympicchannel.com/account
               </Text>
               <Text style={{ ...styles.text, marginBottom: 30 }} adjustsFontSizeToFit>
@@ -84,7 +90,9 @@ class SignInScreen extends React.Component {
               </Text>
               {
                 this.state.loading
-                  ? <View style={styles.pinCodeSpinner}><ActivityIndicator size="small" color="#525A5C" /></View>
+                  ? <View style={styles.pinCodeSpinner}>
+                    <ActivityIndicator size="small" color="#525A5C" />
+                  </View>
                   : <Text style={styles.pinCode} adjustsFontSizeToFit>{this.state.devicePinCode}</Text>
               }
             </View>
@@ -98,13 +106,22 @@ class SignInScreen extends React.Component {
               }
             </View>
           </View>
-        </React.Fragment>
+          <View style={styles.bottomText}>
+            <Text style={styles.text}>
+              If you need support, please visit <Text style={{ ...styles.text, color: '#1779AE', marginLeft: 32 }}> http://olympicchannel.com/signin/support</Text>
+            </Text>
+          </View>
+        </View>
       </Layout>
     );
   }
 }
 
 const styles = {
+  container: {
+    flex: 1,
+    alignItems: 'center'
+  },
   title: {
     color: "#525A5C",
     fontSize: 42,
@@ -116,12 +133,24 @@ const styles = {
     fontSize: 32,
     marginBottom: 20,
   },
+  url: {
+    fontWeight: 'bold',
+    fontSize: 36,
+    marginBottom: 60,
+    color: '#1779AE'
+  },
   columnsContainer: {
     width: 1110,
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
     paddingTop: 30
+  },
+  bottomText: {
+    width: 1110,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 150
   },
   leftColumn: {
     flex: 1,
@@ -134,7 +163,7 @@ const styles = {
   rightColumn: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     borderLeftColor: '#979797',
     borderLeftWidth: 2,
     minHeight: 330

@@ -31,17 +31,18 @@ export class OCLoginPluginComponent extends React.Component {
   }
 
   async checkTokenStatus() {
-    const accessToken = await localStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err));
-    const skipPrehook = await localStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err));
-    const userName = await localStorage.getItem(USERNAME, NAMESPACE).catch(err => console.log(err));
+    const accessToken = await localStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err, TOKEN));
+    const skipPrehook = await localStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err, SKIP));
+    const userName = await localStorage.getItem(USERNAME, NAMESPACE).catch(err => console.log(err, USERNAME));
 
     if (this.state.isPrehook && (accessToken || skipPrehook)) {
       this.props.callback({ success: true })
     } 
-    else if (!this.state.isPrehook && accessToken && userName) {
+    else if (!this.state.isPrehook && (accessToken && accessToken !== 'NOT_SET') && userName) {
       this.setState({
         screen: 'WELCOME',
-        userName
+        userName,
+        accessToken
       })
     }
     else {
@@ -79,7 +80,10 @@ export class OCLoginPluginComponent extends React.Component {
           goToScreen={this.goToScreen}
           closeHook={this.props.callback}
           userName={this.state.userName}
+          accessToken={this.state.accessToken}
           isPrehook={this.state.isPrehook}
+          token={TOKEN}
+          namespace={NAMESPACE}
         />;
       }
       case 'SIGNIN': {

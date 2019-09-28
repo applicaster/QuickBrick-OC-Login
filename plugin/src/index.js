@@ -2,11 +2,13 @@
 import * as React from "react";
 import IntroScreen from './screens/IntroScreen';
 import SignInScreen from './screens/SignInScreen';
+import WelcomeScreen from './screens/WelcomeScreen';
 import LoadingScreen from './screens/LoadingScreen';
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
 
 const NAMESPACE = "quick-brick-oc-login-plugin";
 const TOKEN = 'oc_access_token';
+const USERNAME = 'oc_username';
 const SKIP = 'skip-prehook'
 
 export class OCLoginPluginComponent extends React.Component {
@@ -14,7 +16,9 @@ export class OCLoginPluginComponent extends React.Component {
     super(props);
 
     this.state = {
-      screen: 'LOADING'
+      screen: 'LOADING',
+      isPrehook: Boolean(this.props.callback),
+      userName: ''
     };
 
     this.renderScreen = this.renderScreen.bind(this);
@@ -29,10 +33,18 @@ export class OCLoginPluginComponent extends React.Component {
   async checkTokenStatus() {
     const accessToken = await localStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err));
     const skipPrehook = await localStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err));
+    const userName = await localStorage.getItem(USERNAME, NAMESPACE).catch(err => console.log(err));
 
-    if (accessToken || skipPrehook) {
+    if (this.state.isPrehook && (accessToken || skipPrehook)) {
       this.props.callback({ success: true })
-    } else {
+    } 
+    else if (!this.state.isPrehook && accessToken && userName) {
+      this.setState({
+        screen: 'WELCOME',
+        userName
+      })
+    }
+    else {
       this.setState({
         screen: 'INTRO'
       })
@@ -48,16 +60,26 @@ export class OCLoginPluginComponent extends React.Component {
   renderScreen(screen) {
     switch (screen) {
       case 'LOADING': {
-        return <LoadingScreen 
-          goToScreen={this.goToScreen} 
+        return <LoadingScreen
+          goToScreen={this.goToScreen}
+          isPrehook={this.state.isPrehook}
         />;
       }
       case 'INTRO': {
-        return <IntroScreen 
-          goToScreen={this.goToScreen} 
+        return <IntroScreen
+          goToScreen={this.goToScreen}
           closeHook={this.props.callback}
           namespace={NAMESPACE}
           skip={SKIP}
+          isPrehook={this.state.isPrehook}
+        />;
+      }
+      case 'WELCOME': {
+        return <WelcomeScreen
+          goToScreen={this.goToScreen}
+          closeHook={this.props.callback}
+          userName={this.state.userName}
+          isPrehook={this.state.isPrehook}
         />;
       }
       case 'SIGNIN': {
@@ -65,7 +87,9 @@ export class OCLoginPluginComponent extends React.Component {
           goToScreen={this.goToScreen}
           closeHook={this.props.callback}
           namespace={NAMESPACE}
+          userName={USERNAME}
           token={TOKEN}
+          isPrehook={this.state.isPrehook}
         />
       }
     }

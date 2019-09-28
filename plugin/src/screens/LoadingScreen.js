@@ -22,7 +22,7 @@ const styles = {
     width,
     height,
     backgroundColor: "#E2E2E2",
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
   },

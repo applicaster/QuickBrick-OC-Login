@@ -1,8 +1,8 @@
 import * as React from "react";
+import axios from "axios";
 import { View, Text, ActivityIndicator } from "react-native";
 import { getAppData } from "@applicaster/zapp-react-native-bridge/QuickBrick";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
-import axios from "axios";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
 
@@ -65,14 +65,19 @@ class SignInScreen extends React.Component {
           this.props.namespace
         )
 
-        this.props.closeHook({ success: true })
+        if (this.props.isPrehook) {
+          this.props.closeHook({ success: true })
+        } else {
+          this.props.goToScreen('WELCOME')
+        }
+
       }
     }).catch(err => console.log(err))
   }
 
   render() {
     return (
-      <Layout>
+      <Layout isPrehook={this.props.isPrehook}>
         <View style={styles.container}>
           <Text style={styles.title}>
             SIGN IN INTO YOUR OLYMPIC CHANNEL ACCOUNT

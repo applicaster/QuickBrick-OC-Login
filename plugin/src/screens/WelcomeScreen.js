@@ -13,6 +13,19 @@ class WelcomeScreen extends React.Component {
     this.handleSignOut = this.handleSignOut.bind(this);
   }
 
+  async componentDidMount() {
+    const {
+      userName,
+      namespace
+    } = this.props;
+
+    await localStorage.getItem(userName, namespace).catch(err => console.log(err, userName));
+
+    this.setState({
+      userName
+    })
+  }
+
   handleSignOut() {
     axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/Logout',
       {
@@ -41,7 +54,7 @@ class WelcomeScreen extends React.Component {
     return (
       <Layout>
         <View style={styles.container}>
-          <Text style={styles.text}>Hi <Text style={styles.userName}>{this.props.userName}!</Text></Text>
+          <Text style={styles.text}>Hi <Text style={styles.userName}>{this.props.userName || this.state.userName}!</Text></Text>
           <Text style={styles.text}>To update your account please visit <Text style={styles.url}>www.olympicchannel.com/my-profile</Text></Text>
           <FocusableGroup id={'sign-in-button'} style={styles.buttonContainer}>
             <Button

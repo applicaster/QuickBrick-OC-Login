@@ -6,14 +6,16 @@ const { height } = Dimensions.get('window');
 class Layout extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image
-            style={styles.logo}
-            resizeMode="contain"
-            source={{ uri: "https://assets-production.applicaster.com/static/olympic-channel/images/oc-logo.png" }}
-          />
-        </View>
+      <View style={{...styles.container, backgroundColor: this.props.isPrehook ? '#f1f1f1' : 'transparent'}}>
+        { this.props.isPrehook &&
+          <View style={styles.logoContainer}>
+            <Image
+              style={styles.logo}
+              resizeMode="contain"
+              source={{ uri: "https://assets-production.applicaster.com/static/olympic-channel/images/oc-logo.png" }}
+            />
+          </View>
+        }
         <View style={styles.subContainer}>
           {this.props.children}
         </View>
@@ -26,7 +28,6 @@ const styles = {
   container: {
     flex: 1,
     height,
-    backgroundColor: "#F1F1F1",
     alignItems: 'center',
   },
   logoContainer: {

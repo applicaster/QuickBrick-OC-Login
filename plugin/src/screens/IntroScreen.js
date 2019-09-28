@@ -26,24 +26,29 @@ class IntroScreen extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout isPrehook={this.props.isPrehook}>
         <View style={styles.container}>
-          <Text style={styles.title}>WELCOME TO THE OLYMPIC CHANNEL</Text>
+          <Text style={this.props.isPrehook ? styles.title : styles.subTitle}>
+            {this.props.isPrehook ? 'WELCOME TO THE OLYMPIC CHANNEL' : 'Create an account to personalize your Olympic Channel experience'}
+          </Text>
           {
-          /*
-            <Text style={styles.subTitle}>Create an account to personalize your Olympic Channel experience</Text>
-            <View style={styles.iconsContainer}>
-              <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
-              <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
-              <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/continue-watching.png" />
-              <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/sync-devices.png" />
-            </View> 
-          */
+            /*
+              <Text style={styles.subTitle}>Create an account to personalize your Olympic Channel experience</Text>
+              <View style={styles.iconsContainer}>
+                <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
+                <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
+                <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/continue-watching.png" />
+                <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/sync-devices.png" />
+              </View> 
+            */
           }
           <View style={styles.buttonContainer}>
-            <FocusableGroup id={'sign-in-button'} style={{justifyContent: 'center', alignItems: 'center'}}>
+            <FocusableGroup id={'sign-in-button'} style={{ justifyContent: 'center', alignItems: 'center' }}>
               <Button label="Sign In / Register" groupId={'sign-in-button'} onPress={() => this.props.goToScreen("SIGNIN")} />
-              <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.skipPrehook()} />
+              {
+                this.props.isPrehook &&
+                <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.skipPrehook()} />
+              }
             </FocusableGroup>
           </View>
         </View>
@@ -75,6 +80,11 @@ const styles = {
   subTitle: {
     color: "#525A5C",
     fontSize: 32,
+  },
+  altSubTitle: {
+    color: "#525A5C",
+    fontSize: 32,
+    marginBottom: 300
   },
   buttonContainer: {
     marginTop: 20,

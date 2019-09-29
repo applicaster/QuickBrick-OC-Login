@@ -9,17 +9,19 @@ import Layout from "../components/Layout";
 class WelcomeScreen extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      userName: ''
+    }
     this.handleSignOut = this.handleSignOut.bind(this);
   }
 
   async componentDidMount() {
     const {
-      userName,
+      name,
       namespace
     } = this.props;
 
-    await localStorage.getItem(userName, namespace).catch(err => console.log(err, userName));
+    const userName = await localStorage.getItem(name, namespace).catch(err => console.log(err, name));
 
     this.setState({
       userName

@@ -34,7 +34,7 @@ export class OCLoginPluginComponent extends React.Component {
     const accessToken = await localStorage.getItem(TOKEN, NAMESPACE).catch(err => console.log(err, TOKEN));
     const skipPrehook = await localStorage.getItem(SKIP, NAMESPACE).catch(err => console.log(err, SKIP));
     const userName = await localStorage.getItem(USERNAME, NAMESPACE).catch(err => console.log(err, USERNAME));
-    console.log(accessToken, skipPrehook, userName, 'LOCAL DATA')
+
     if (this.state.isPrehook && (accessToken || skipPrehook)) {
       this.props.callback({ success: true })
     } 

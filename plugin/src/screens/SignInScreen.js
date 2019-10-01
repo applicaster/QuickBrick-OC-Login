@@ -113,7 +113,7 @@ class SignInScreen extends React.Component {
           </View>
           <View style={styles.bottomText}>
             <Text style={styles.text}>
-              If you need support, please visit <Text style={{ ...styles.text, color: '#1779AE', marginLeft: 32 }}> http://olympicchannel.com/signin/support</Text>
+              If you need support, please visit <Text style={{ ...styles.text, color: '#525A5C', marginLeft: 32 }}> http://olympicchannel.com/signin/support</Text>
             </Text>
           </View>
         </View>

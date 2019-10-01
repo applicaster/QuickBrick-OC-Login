@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, View, ImageBackground, Image } from "react-native";
+import { Dimensions, View, Image } from "react-native";
 
 const { height } = Dimensions.get('window');
 

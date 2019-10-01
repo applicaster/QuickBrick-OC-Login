@@ -92,7 +92,7 @@ const styles = {
     fontWeight: 'bold',
     fontSize: 36,
     marginBottom: 60,
-    color: '#1779AE'
+    color: '#525A5C'
   },
   subTitle: {
     color: "#525A5C",

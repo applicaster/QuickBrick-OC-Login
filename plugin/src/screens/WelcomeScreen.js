@@ -63,6 +63,7 @@ class WelcomeScreen extends React.Component {
               label="Sign Out"
               groupId={'sign-out-button'}
               onPress={() => this.handleSignOut()}
+              preferredFocus={true}
             />
           </FocusableGroup>
         </View>

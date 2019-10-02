@@ -43,8 +43,13 @@ class IntroScreen extends React.Component {
             */
           }
           <View style={styles.buttonContainer}>
-            <FocusableGroup id={'sign-in-button'} style={{ justifyContent: 'center', alignItems: 'center' }}>
-              <Button label="Sign In / Register" groupId={'sign-in-button'} onPress={() => this.props.goToScreen("SIGNIN")} />
+            <FocusableGroup id={'sign-in-button'} style={styles.focusContainer}>
+              <Button 
+                label="Sign In / Register" 
+                groupId={'sign-in-button'} 
+                onPress={() => this.props.goToScreen("SIGNIN")} 
+                preferredFocus={true}
+              />
               {
                 this.props.isPrehook &&
                 <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.skipPrehook()} />
@@ -93,6 +98,10 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center'
   },
+  focusContainer: {
+    justifyContent: 'center', 
+    alignItems: 'center'
+  }
 };
 
 IntroScreen.displayName = 'IntroScreen';

@@ -88,7 +88,7 @@ class SignInScreen extends React.Component {
                 Go to:
               </Text>
               <Text style={{ ...styles.text, ...styles.url }} adjustsFontSizeToFit>
-                olympicchannel.com/account
+                https://account.olympicchannel.com
               </Text>
               <Text style={{ ...styles.text, marginBottom: 30 }} adjustsFontSizeToFit>
                 Enter the activation code below

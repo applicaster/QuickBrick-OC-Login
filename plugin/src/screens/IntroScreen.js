@@ -13,7 +13,7 @@ class IntroScreen extends React.Component {
   }
 
   componentDidMount() {
-    trackEvent("Entry")
+    trackEvent("Entry");
   }
 
   async skipPrehook() {
@@ -23,6 +23,7 @@ class IntroScreen extends React.Component {
       this.props.namespace
     )
       .then(() => {
+        trackEvent("Entry", {buttonPressed: "Maybe Later"})
         this.props.closeHook({ success: true })
       })
       .catch(err => console.log(err))

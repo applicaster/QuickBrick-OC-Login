@@ -16,6 +16,8 @@ class WelcomeScreen extends React.Component {
   }
 
   async componentDidMount() {
+    trackEvent("Welcome");
+
     const {
       name,
       namespace

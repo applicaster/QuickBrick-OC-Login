@@ -3,6 +3,7 @@ import axios from "axios";
 import { View, Text, ActivityIndicator } from "react-native";
 import { getAppData } from "@applicaster/zapp-react-native-bridge/QuickBrick";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
+import { trackEvent, identifyUser} from "../analytics/segment/index";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
 
@@ -20,6 +21,8 @@ class SignInScreen extends React.Component {
   }
 
   componentDidMount() {
+    trackEvent("Waiting Page")
+
     axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/CreateDevice',
       {
         "deviceId": getAppData().uuid
@@ -53,19 +56,27 @@ class SignInScreen extends React.Component {
       }
     ).then(async response => {
       if (response.data.access_token) {
+        const {
+          access_token,
+          firstname
+        } = response.data;
+
+        identifyUser(access_token, firstname, this.state.devicePinCode)
+
         await localStorage.setItem(
           this.props.token,
-          response.data.access_token,
+          access_token,
           this.props.namespace
         )
 
         await localStorage.setItem(
           this.props.userName,
-          response.data.firstname,
+          firstname,
           this.props.namespace
         )
 
         if (this.props.isPrehook) {
+          trackEvent("Login Succesful")
           this.props.closeHook({ success: true })
         } else {
           this.props.goToScreen('WELCOME')
@@ -88,7 +99,7 @@ class SignInScreen extends React.Component {
                 Go to:
               </Text>
               <Text style={{ ...styles.text, ...styles.url }} adjustsFontSizeToFit>
-                https://account.olympicchannel.com
+                account.olympicchannel.com
               </Text>
               <Text style={{ ...styles.text, marginBottom: 30 }} adjustsFontSizeToFit>
                 Enter the activation code below

@@ -2,7 +2,7 @@ import * as React from "react";
 import { View, Text } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
-import IconWithTitle from '../components/IconWithTitle'
+import { trackEvent } from "../analytics/segment/index";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 
@@ -10,6 +10,10 @@ class IntroScreen extends React.Component {
   constructor(props) {
     super(props);
     this.skipPrehook = this.skipPrehook.bind(this);
+  }
+
+  componentDidMount() {
+    trackEvent("Entry")
   }
 
   async skipPrehook() {
@@ -31,17 +35,6 @@ class IntroScreen extends React.Component {
           <Text style={this.props.isPrehook ? styles.title : styles.subTitle}>
             {this.props.isPrehook ? 'WELCOME TO THE OLYMPIC CHANNEL' : 'Create an account to personalize your Olympic Channel experience'}
           </Text>
-          {
-            /*
-              <Text style={styles.subTitle}>Create an account to personalize your Olympic Channel experience</Text>
-              <View style={styles.iconsContainer}>
-                <IconWithTitle title="Newsletter" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/newsletter.png" />
-                <IconWithTitle title="Favorites" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/favorites.png" />
-                <IconWithTitle title="Continue Watching" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/continue-watching.png" />
-                <IconWithTitle title="Sync-Accross Devices" imgUrl="https://assets-production.applicaster.com/static/olympic-channel/images/sync-devices.png" />
-              </View> 
-            */
-          }
           <View style={styles.buttonContainer}>
             <FocusableGroup id={'sign-in-button'} style={styles.focusContainer}>
               <Button 

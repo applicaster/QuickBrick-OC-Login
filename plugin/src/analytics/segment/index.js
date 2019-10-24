@@ -8,11 +8,11 @@ const IDENTIFY_URL = "https://api.segment.io/v1/identify"
 export function trackEvent(screen, payload = {}, previousPage = "") {
   axios.post(TRACK_URL,
     {
-      "userId": getAppData().uuid,
       "event": `Gygia - ${screen}`,
       "properties": {
         "deviceType": Platform.OS,
         "previousPage": previousPage,
+        "deviceId": getAppData().uuid,
         payload
       },
       "timestamp": Date.now()
@@ -31,7 +31,7 @@ export function trackEvent(screen, payload = {}, previousPage = "") {
 export function identifyUser(userName, accessToken, devicePinCode) {
   axios.post(IDENTIFY_URL,
     {
-      "userId": getAppData().uuid,
+      "userId": accessToken,
       "properties": {
         "deviceType": Platform.OS,
         "previousPage": previousPage,

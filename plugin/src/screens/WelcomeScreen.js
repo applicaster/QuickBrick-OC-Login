@@ -16,7 +16,7 @@ class WelcomeScreen extends React.Component {
   }
 
   async componentDidMount() {
-    trackEvent("Welcome");
+    trackEvent(this.props.segmentKey, "Welcome");
 
     const {
       name,
@@ -60,7 +60,7 @@ class WelcomeScreen extends React.Component {
         <View style={styles.container}>
           <Text style={styles.text}>Hi <Text style={styles.userName}>{this.props.userName || this.state.userName}!</Text></Text>
           <Text style={styles.text}>To update your account please visit <Text style={styles.url}>www.olympicchannel.com/my-profile</Text></Text>
-          <FocusableGroup id={'sign-in-button'} style={styles.buttonContainer}>
+          <FocusableGroup id={'sign-in-button'} groupId={this.props.groupId} style={styles.buttonContainer}>
             <Button
               label="Sign Out"
               groupId={'sign-out-button'}

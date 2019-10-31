@@ -21,7 +21,7 @@ class SignInScreen extends React.Component {
   }
 
   componentDidMount() {
-    trackEvent("Waiting Page")
+    trackEvent(this.props.segmentKey, "Waiting Page")
 
     axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/CreateDevice',
       {
@@ -61,7 +61,7 @@ class SignInScreen extends React.Component {
           firstname
         } = response.data;
 
-        identifyUser(access_token, firstname, this.state.devicePinCode)
+        identifyUser(this.props.segmentKey, access_token, firstname, this.state.devicePinCode)
 
         await localStorage.setItem(
           this.props.token,
@@ -76,7 +76,7 @@ class SignInScreen extends React.Component {
         )
 
         if (this.props.isPrehook) {
-          trackEvent("Login Succesful")
+          trackEvent(this.props.segmentKey, "Login Succesful")
           this.props.closeHook({ success: true })
         } else {
           this.props.goToScreen('WELCOME')

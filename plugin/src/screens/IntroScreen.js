@@ -13,7 +13,7 @@ class IntroScreen extends React.Component {
   }
 
   componentDidMount() {
-    trackEvent("Entry");
+    trackEvent(this.props.segmentKey, "Entry");
   }
 
   async skipPrehook() {
@@ -23,29 +23,35 @@ class IntroScreen extends React.Component {
       this.props.namespace
     )
       .then(() => {
-        trackEvent("Entry", {buttonPressed: "Maybe Later"})
+        trackEvent(this.props.segmentKey,"Entry", {buttonPressed: "Maybe Later"})
         this.props.closeHook({ success: true })
       })
       .catch(err => console.log(err))
   }
 
   render() {
+    const {
+      isPrehook,
+      groupId,
+      goToScreen
+    } = this.props;
+
     return (
-      <Layout isPrehook={this.props.isPrehook}>
+      <Layout isPrehook={isPrehook}>
         <View style={styles.container}>
-          <Text style={this.props.isPrehook ? styles.title : styles.subTitle}>
-            {this.props.isPrehook ? 'WELCOME TO THE OLYMPIC CHANNEL' : 'Create an account to personalize your Olympic Channel experience'}
+          <Text style={isPrehook ? styles.title : styles.subTitle}>
+            {isPrehook ? 'WELCOME TO THE OLYMPIC CHANNEL' : 'Create an account to personalize your Olympic Channel experience'}
           </Text>
           <View style={styles.buttonContainer}>
-            <FocusableGroup id={'sign-in-button'} style={styles.focusContainer}>
+            <FocusableGroup id={'sign-in-button'} style={styles.focusContainer} groupId={groupId}>
               <Button 
                 label="Sign In / Register" 
                 groupId={'sign-in-button'} 
-                onPress={() => this.props.goToScreen("SIGNIN")} 
+                onPress={() => goToScreen("SIGNIN")} 
                 preferredFocus={true}
               />
               {
-                this.props.isPrehook &&
+                isPrehook &&
                 <Button label="Maybe Later" groupId={'sign-in-button'} onPress={() => this.skipPrehook()} />
               }
             </FocusableGroup>

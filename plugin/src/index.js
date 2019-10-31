@@ -76,7 +76,7 @@ export class OCLoginPluginComponent extends React.Component {
         return <LoadingScreen
           goToScreen={this.goToScreen}
           isPrehook={this.state.isPrehook}
-          groupId={groupId}
+          groupId={groupId()}
           segmentKey={segmentKey}
         />;
       }
@@ -87,7 +87,7 @@ export class OCLoginPluginComponent extends React.Component {
           namespace={NAMESPACE}
           skip={SKIP}
           isPrehook={this.state.isPrehook}
-          groupId={groupId}
+          groupId={groupId()}
           segmentKey={segmentKey}
         />;
       }
@@ -101,7 +101,7 @@ export class OCLoginPluginComponent extends React.Component {
           isPrehook={this.state.isPrehook}
           token={TOKEN}
           namespace={NAMESPACE}
-          groupId={groupId}
+          groupId={groupId()}
           segmentKey={segmentKey}
         />;
       }
@@ -113,7 +113,7 @@ export class OCLoginPluginComponent extends React.Component {
           userName={USERNAME}
           token={TOKEN}
           isPrehook={this.state.isPrehook}
-          groupId={groupId}
+          groupId={groupId()}
           segmentKey={segmentKey}
         />
       }

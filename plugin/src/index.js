@@ -59,11 +59,16 @@ export class OCLoginPluginComponent extends React.Component {
   }
 
   renderScreen(screen) {
+    const groupId = this.props.screenData.groupId || '';
+    const segmentKey = (this.props.screenData.general && this.props.screenData.general.segment_key) || ""
+
     switch (screen) {
       case 'LOADING': {
         return <LoadingScreen
           goToScreen={this.goToScreen}
           isPrehook={this.state.isPrehook}
+          groupId={groupId}
+          segmentKey={segmentKey}
         />;
       }
       case 'INTRO': {
@@ -73,6 +78,8 @@ export class OCLoginPluginComponent extends React.Component {
           namespace={NAMESPACE}
           skip={SKIP}
           isPrehook={this.state.isPrehook}
+          groupId={groupId}
+          segmentKey={segmentKey}
         />;
       }
       case 'WELCOME': {
@@ -85,6 +92,8 @@ export class OCLoginPluginComponent extends React.Component {
           isPrehook={this.state.isPrehook}
           token={TOKEN}
           namespace={NAMESPACE}
+          groupId={groupId}
+          segmentKey={segmentKey}
         />;
       }
       case 'SIGNIN': {
@@ -95,6 +104,8 @@ export class OCLoginPluginComponent extends React.Component {
           userName={USERNAME}
           token={TOKEN}
           isPrehook={this.state.isPrehook}
+          groupId={groupId}
+          segmentKey={segmentKey}
         />
       }
     }

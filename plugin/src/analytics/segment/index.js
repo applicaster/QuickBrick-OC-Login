@@ -12,7 +12,7 @@ function uuidv4() {
   });
 }
 
-export function trackEvent(screen, payload = {}, previousPage = "") {
+export function trackEvent(segmentKey, screen, payload = {}, previousPage = "") {
   axios.post(TRACK_URL,
     {
       "anonymousId": uuidv4(),
@@ -28,7 +28,7 @@ export function trackEvent(screen, payload = {}, previousPage = "") {
     {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Basic YVVRYWZ1WlZzd29DZDdmbjJwOEx2dTZDVlR1Y2N2Q0U6"
+        "Authorization": `Basic ${btoa(`${segmentKey}:`)}`
       }
     }
   ).then(response => {
@@ -54,7 +54,7 @@ export function identifyUser(userName, accessToken, devicePinCode) {
     {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Basic YVVRYWZ1WlZzd29DZDdmbjJwOEx2dTZDVlR1Y2N2Q0U6"
+        "Authorization": `Basic ${btoa(`${segmentKey}:`)}`
       }
     }
   ).then(response => {

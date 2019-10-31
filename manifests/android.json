@@ -6,11 +6,11 @@
   "react_native": true,
   "dependency_repository_url": [],
   "dependency_name": "@applicaster/quick-brick-oc-login-plugin",
-  "dependency_version": "0.2.6",
+  "dependency_version": "0.2.7",
   "platform": "android",
   "author_name": "Manuel Pretelin",
   "author_email": "m.pretelin@applicaster.com",
-  "manifest_version": "0.2.6",
+  "manifest_version": "0.2.7",
   "name": "QuickBrick OC TV Login",
   "description": "Olympic Channel login with pin and pair",
   "type": "general",
@@ -42,9 +42,9 @@
   },
   "custom_configuration_fields": [
     {
-      "key": "expected_token",
       "type": "text",
-      "tooltip_text": "sets the value the plugin expects to simulate a valid login"
+      "key": "segment_key",
+      "tooltip_text": "Segment Key"
     }
   ],
   "targets": ["tv"]

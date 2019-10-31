@@ -59,7 +59,16 @@ export class OCLoginPluginComponent extends React.Component {
   }
 
   renderScreen(screen) {
-    const groupId = this.props.screenData.groupId || '';
+    const groupId = () => {
+      if (this.props.screenData) {
+        return this.props.screenData.groupId;
+      }  
+      if (this.props.payload) {
+        return this.props.payload.groupId
+      } 
+      return '';
+    }
+
     const segmentKey = this.props.configuration.segment_key || ""
 
     switch (screen) {

@@ -26,9 +26,11 @@ export function trackEvent(segmentKey, screen, payload = {}, previousPage = "") 
       "timestamp": Date.now()
     },
     {
+      auth: {
+        username: segmentKey,
+      },
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Basic ${btoa(`${segmentKey}:`)}`
       }
     }
   ).then(response => {

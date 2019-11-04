@@ -3,6 +3,7 @@ import axios from "axios";
 import { View, Text } from "react-native";
 import { FocusableGroup } from "@applicaster/zapp-react-native-ui-components/Components/FocusableGroup";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
+import { trackEvent } from "../analytics/segment/index";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 
@@ -16,24 +17,33 @@ class WelcomeScreen extends React.Component {
   }
 
   async componentDidMount() {
-    trackEvent(this.props.segmentKey, "Welcome");
-
     const {
       name,
-      namespace
+      namespace,
+      token
     } = this.props;
 
     const userName = await localStorage.getItem(name, namespace).catch(err => console.log(err, name));
+    const accessToken = await localStorage.getItem(token, namespace).catch(err => console.log(err, name));
+
 
     this.setState({
-      userName
+      userName,
+      accessToken
+    }, () => {
+      trackEvent(this.props.segmentKey, "Welcome", { userName, accessToken });
     })
   }
 
   handleSignOut() {
+    const {
+      userName,
+      accessToken
+    } = this.state;
+
     axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/Logout',
       {
-        "access_token": this.props.accessToken
+        "access_token": accessToken
       },
       {
         headers: {
@@ -48,8 +58,8 @@ class WelcomeScreen extends React.Component {
           'NOT_SET',
           this.props.namespace
         )
-
-        this.props.goToScreen('INTRO') 
+        trackEvent(this.props.segmentKey, "SignOut", { userName, accessToken }, "Welcome");
+        this.props.goToScreen('INTRO')
       }
     }).catch(err => console.log(err))
   }

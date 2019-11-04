@@ -61,7 +61,7 @@ class SignInScreen extends React.Component {
           firstname
         } = response.data;
 
-        identifyUser(this.props.segmentKey, access_token, firstname, this.state.devicePinCode)
+        identifyUser(this.props.segmentKey, firstname, access_token, this.state.devicePinCode, 'Sign In Page')
 
         await localStorage.setItem(
           this.props.token,
@@ -118,7 +118,7 @@ class SignInScreen extends React.Component {
                   ? <View style={styles.loadContainer}>
                     <ActivityIndicator size="large" color="#525A5C" />
                   </View>
-                  : <QRCode url={`https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod?devicePinCode=${this.state.devicePinCode}`} />
+                  : <QRCode url={`https://account.olympicchannel.com/?devicePinCode=${this.state.devicePinCode}`} />
               }
             </View>
           </View>

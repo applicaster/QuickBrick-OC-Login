@@ -13,9 +13,21 @@ function uuidv4() {
 }
 
 export function trackEvent(segmentKey, screen, payload = {}, previousPage = "") {
+  let userId = {}
+
+  if (payload.accessToken) {
+    userId = {
+      "userId": payload.accessToken,
+    }
+  } else {
+    userId = {
+      "anonymousId": uuidv4(),
+    }
+  }
+
   axios.post(TRACK_URL,
     {
-      "anonymousId": uuidv4(),
+      ...userId,
       "event": `Gygia - ${screen}`,
       "properties": {
         "deviceType": Platform.OS,
@@ -38,7 +50,7 @@ export function trackEvent(segmentKey, screen, payload = {}, previousPage = "") 
   }).catch(err => console.log(err))
 }
 
-export function identifyUser(userName, accessToken, devicePinCode) {
+export function identifyUser(segmentKey, userName, accessToken, devicePinCode, previousPage) {
   axios.post(IDENTIFY_URL,
     {
       "userId": accessToken,

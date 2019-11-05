@@ -66,7 +66,7 @@ export function identifyUser(segmentKey, userName, accessToken, devicePinCode, p
     {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Basic ${btoa(`${segmentKey}:`)}`
+        "Authorization": `Basic ${segmentKey}`
       }
     }
   ).then(response => {

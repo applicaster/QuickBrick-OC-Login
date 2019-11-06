@@ -4,6 +4,7 @@ import { View, Text, ActivityIndicator } from "react-native";
 import { getAppData } from "@applicaster/zapp-react-native-bridge/QuickBrick";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
 import { trackEvent, identifyUser} from "../analytics/segment/index";
+import { uuidv4 } from "../utils";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
 
@@ -25,7 +26,7 @@ class SignInScreen extends React.Component {
 
     axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/CreateDevice',
       {
-        "deviceId": getAppData().uuid
+        "deviceId": getAppData().uuid || uuidv4()
       },
       {
         headers: {

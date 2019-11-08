@@ -41,7 +41,7 @@ class WelcomeScreen extends React.Component {
       accessToken
     } = this.state;
 
-    axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/Logout',
+    axios.post('https://account.olympicchannel.com/Prod/registration/api/Device/Logout',
       {
         "access_token": accessToken
       },

@@ -24,7 +24,7 @@ class SignInScreen extends React.Component {
   componentDidMount() {
     trackEvent(this.props.segmentKey, "Waiting Page")
 
-    axios.post('https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/CreateDevice',
+    axios.post('https://account.olympicchannel.com/registration/api/Device/CreateDevice',
       {
         "deviceId": getAppData().uuid || uuidv4()
       },
@@ -49,7 +49,7 @@ class SignInScreen extends React.Component {
   }
 
   getSignInStatus() {
-    axios.get(`https://dwettnsyyj.execute-api.eu-west-1.amazonaws.com/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
+    axios.get(`https://account.olympicchannel.com/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
       {
         headers: {
           "accept": "application/json"

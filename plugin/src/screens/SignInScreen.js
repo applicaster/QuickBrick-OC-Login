@@ -23,8 +23,7 @@ class SignInScreen extends React.Component {
 
   componentDidMount() {
     trackEvent(this.props.segmentKey, "Waiting Page")
-
-    axios.post('https://account.olympicchannel.com/registration/api/Device/CreateDevice',
+    axios.post(`${this.props.gygiaBaseUrl}/Prod/registration/api/Device/CreateDevice`,
       {
         "deviceId": getAppData().uuid || uuidv4()
       },
@@ -49,7 +48,7 @@ class SignInScreen extends React.Component {
   }
 
   getSignInStatus() {
-    axios.get(`https://account.olympicchannel.com/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
+    axios.get(`${this.props.gygiaBaseUrl}/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
       {
         headers: {
           "accept": "application/json"
@@ -84,7 +83,7 @@ class SignInScreen extends React.Component {
         }
 
       }
-    }).catch(err => console.log(err))
+    }).catch(err => console.log(err, 'LOL'))
   }
 
   render() {

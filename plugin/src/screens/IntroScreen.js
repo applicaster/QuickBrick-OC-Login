@@ -17,16 +17,13 @@ class IntroScreen extends React.Component {
   }
 
   async skipPrehook() {
-    await localStorage.setItem(
+    localStorage.setItem(
       this.props.skip,
       true,
       this.props.namespace
     )
-      .then(() => {
-        trackEvent(this.props.segmentKey,"Entry", {buttonPressed: "Maybe Later"})
-        this.props.closeHook({ success: true })
-      })
-      .catch(err => console.log(err))
+    trackEvent(this.props.segmentKey, "Entry", { buttonPressed: "Maybe Later" })
+    this.props.closeHook({ success: true })
   }
 
   render() {
@@ -44,10 +41,10 @@ class IntroScreen extends React.Component {
           </Text>
           <View style={styles.buttonContainer}>
             <FocusableGroup id={'sign-in-button'} style={styles.focusContainer} groupId={groupId}>
-              <Button 
-                label="Sign In / Register" 
-                groupId={'sign-in-button'} 
-                onPress={() => goToScreen("SIGNIN")} 
+              <Button
+                label="Sign In / Register"
+                groupId={'sign-in-button'}
+                onPress={() => goToScreen("SIGNIN")}
                 preferredFocus={true}
               />
               {
@@ -99,7 +96,7 @@ const styles = {
     justifyContent: 'center'
   },
   focusContainer: {
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center'
   }
 };

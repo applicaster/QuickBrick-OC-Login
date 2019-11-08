@@ -69,7 +69,8 @@ export class OCLoginPluginComponent extends React.Component {
       return '';
     }
 
-    const segmentKey = this.props.configuration.segment_key || ""
+    const segmentKey = this.props.configuration.segment_key ? this.props.configuration.segment_key : '';
+    const gygiaBaseUrl = this.props.configuration ? this.props.configuration.gygia_base_url : '';
 
     switch (screen) {
       case 'LOADING': {
@@ -103,6 +104,7 @@ export class OCLoginPluginComponent extends React.Component {
           namespace={NAMESPACE}
           groupId={groupId()}
           segmentKey={segmentKey}
+          gygiaBaseUrl={gygiaBaseUrl}
         />;
       }
       case 'SIGNIN': {
@@ -115,6 +117,7 @@ export class OCLoginPluginComponent extends React.Component {
           isPrehook={this.state.isPrehook}
           groupId={groupId()}
           segmentKey={segmentKey}
+          gygiaBaseUrl={gygiaBaseUrl}
         />
       }
     }

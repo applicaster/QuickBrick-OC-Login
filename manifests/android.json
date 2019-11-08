@@ -45,6 +45,11 @@
       "type": "text",
       "key": "segment_key",
       "tooltip_text": "Segment Key"
+    },
+    {
+      "type": "text",
+      "key": "gygia_base_url",
+      "tooltip_text": "Gygia Base URL"
     }
   ],
   "targets": ["tv"]

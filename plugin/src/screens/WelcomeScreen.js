@@ -41,7 +41,7 @@ class WelcomeScreen extends React.Component {
       accessToken
     } = this.state;
 
-    axios.post(`${this.props.gygiaBaseUrl}/Prod/registration/api/Device/Logout`,
+    axios.post(`${this.props.gygiaLogoutUrl}`,
       {
         "access_token": accessToken
       },

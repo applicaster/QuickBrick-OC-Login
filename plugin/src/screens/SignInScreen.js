@@ -3,7 +3,7 @@ import axios from "axios";
 import { View, Text, ActivityIndicator } from "react-native";
 import { getAppData } from "@applicaster/zapp-react-native-bridge/QuickBrick";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
-import { trackEvent, identifyUser} from "../analytics/segment/index";
+import { trackEvent, identifyUser } from "../analytics/segment/index";
 import { uuidv4 } from "../utils";
 import Layout from "../components/Layout"
 import QRCode from "../components/QRCode"
@@ -23,7 +23,7 @@ class SignInScreen extends React.Component {
 
   componentDidMount() {
     trackEvent(this.props.segmentKey, "Waiting Page")
-    axios.post(`${this.props.gygiaBaseUrl}/Prod/registration/api/Device/CreateDevice`,
+    axios.post(`${this.props.gygiaCreateDeviceUrl}`,
       {
         "deviceId": getAppData().uuid || uuidv4()
       },
@@ -48,7 +48,7 @@ class SignInScreen extends React.Component {
   }
 
   getSignInStatus() {
-    axios.get(`${this.props.gygiaBaseUrl}/Prod/registration/api/Device/GetDeviceByPin/${this.state.devicePinCode}`,
+    axios.get(`${this.props.gygiaGetDeviceByPinUrl}/${this.state.devicePinCode}`,
       {
         headers: {
           "accept": "application/json"
@@ -118,7 +118,7 @@ class SignInScreen extends React.Component {
                   ? <View style={styles.loadContainer}>
                     <ActivityIndicator size="large" color="#525A5C" />
                   </View>
-                  : <QRCode url={`https://account.olympicchannel.com/?devicePinCode=${this.state.devicePinCode}`} />
+                  : <QRCode url={`${gygiaQrUrl}${this.state.devicePinCode}`} />
               }
             </View>
           </View>

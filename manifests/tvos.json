@@ -37,6 +37,31 @@
         "key": "allow_screen_plugin_presentation",
         "tooltip_text": "Define if",
         "initial_value": true
+      },
+      {
+        "type": "text",
+        "key": "segment_key",
+        "tooltip_text": "Segment Key"
+      },
+      {
+        "type": "text",
+        "key": "gygia_create_device_url",
+        "tooltip_text": "Gygia CreateDevice URL"
+      },
+      {
+        "type": "text",
+        "key": "gygia_get_device_by_pin_url",
+        "tooltip_text": "Gygia GetDeviceByPin URL"
+      },
+      {
+        "type": "text",
+        "key": "gygia_qr_url",
+        "tooltip_text": "Gygia QR code URL"
+      },
+      {
+        "type": "text",
+        "key": "gygia_logout_url",
+        "tooltip_text": "Gygia Logout URL"
       }
     ]
   },
@@ -48,8 +73,23 @@
     },
     {
       "type": "text",
-      "key": "gygia_base_url",
-      "tooltip_text": "Gygia Base URL"
+      "key": "gygia_create_device_url",
+      "tooltip_text": "Gygia CreateDevice URL"
+    },
+    {
+      "type": "text",
+      "key": "gygia_get_device_by_pin_url",
+      "tooltip_text": "Gygia GetDeviceByPin URL"
+    },
+    {
+      "type": "text",
+      "key": "gygia_qr_url",
+      "tooltip_text": "Gygia QR code URL"
+    },
+    {
+      "type": "text",
+      "key": "gygia_logout_url",
+      "tooltip_text": "Gygia Logout URL"
     }
   ],
   "targets": ["tv"]

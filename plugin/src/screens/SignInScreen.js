@@ -118,7 +118,7 @@ class SignInScreen extends React.Component {
                   ? <View style={styles.loadContainer}>
                     <ActivityIndicator size="large" color="#525A5C" />
                   </View>
-                  : <QRCode url={`${gygiaQrUrl}${this.state.devicePinCode}`} />
+                  : <QRCode url={`${this.props.gygiaQrUrl}${this.state.devicePinCode}`} />
               }
             </View>
           </View>

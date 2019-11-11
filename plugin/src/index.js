@@ -37,7 +37,7 @@ export class OCLoginPluginComponent extends React.Component {
 
     if (this.state.isPrehook && (accessToken || skipPrehook)) {
       this.props.callback({ success: true })
-    } 
+    }
     else if (!this.state.isPrehook && (accessToken && accessToken !== 'NOT_SET') && userName) {
       this.setState({
         screen: 'WELCOME',
@@ -59,25 +59,42 @@ export class OCLoginPluginComponent extends React.Component {
   }
 
   renderScreen(screen) {
-    const groupId = () => {
-      if (this.props.screenData) {
-        return this.props.screenData.groupId;
-      }  
-      if (this.props.payload) {
-        return this.props.payload.groupId
-      } 
-      return '';
+    const {
+      configuration,
+      screenData,
+      payload
+    } = this.props;
+
+    const getGroupId = () => {
+      if (screenData) {
+        return screenData.groupId;
+      }
+      if (payload) {
+        return payload.groupId
+      }
     }
 
-    const segmentKey = this.props.configuration.segment_key ? this.props.configuration.segment_key : '';
-    const gygiaBaseUrl = this.props.configuration ? this.props.configuration.gygia_base_url : '';
+    const getPluginData = (data) => {
+      if (configuration && configuration[data]) {
+        return configuration[data];
+      }
+      if (screenData && screenData.general && screenData.general[data]) {
+        return screenData.general[data];
+      }
+    }
+
+    const segmentKey = getPluginData('segment_key');
+    const gygiaCreateDeviceUrl = getPluginData('gygia_create_device_url');
+    const gygiaGetDeviceByPinUrl = getPluginData('gygia_get_device_by_pin_url')
+    const gygiaQrUrl = getPluginData('gygia_qr_url');
+    const gygiaLogoutUrl = getPluginData('gygia_logout_url');
 
     switch (screen) {
       case 'LOADING': {
         return <LoadingScreen
           goToScreen={this.goToScreen}
           isPrehook={this.state.isPrehook}
-          groupId={groupId()}
+          groupId={getGroupId()}
           segmentKey={segmentKey}
         />;
       }
@@ -88,7 +105,7 @@ export class OCLoginPluginComponent extends React.Component {
           namespace={NAMESPACE}
           skip={SKIP}
           isPrehook={this.state.isPrehook}
-          groupId={groupId()}
+          groupId={getGroupId()}
           segmentKey={segmentKey}
         />;
       }
@@ -102,9 +119,9 @@ export class OCLoginPluginComponent extends React.Component {
           isPrehook={this.state.isPrehook}
           token={TOKEN}
           namespace={NAMESPACE}
-          groupId={groupId()}
+          groupId={getGroupId()}
           segmentKey={segmentKey}
-          gygiaBaseUrl={gygiaBaseUrl}
+          gygiaLogoutUrl={gygiaLogoutUrl}
         />;
       }
       case 'SIGNIN': {
@@ -115,9 +132,11 @@ export class OCLoginPluginComponent extends React.Component {
           userName={USERNAME}
           token={TOKEN}
           isPrehook={this.state.isPrehook}
-          groupId={groupId()}
+          groupId={getGroupId()}
           segmentKey={segmentKey}
-          gygiaBaseUrl={gygiaBaseUrl}
+          gygiaCreateDeviceUrl={gygiaCreateDeviceUrl}
+          gygiaGetDeviceByPinUrl={gygiaGetDeviceByPinUrl}
+          gygiaQrUrl={gygiaQrUrl}
         />
       }
     }

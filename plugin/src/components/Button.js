@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View, Text , Platform} from "react-native";
 import { Focusable } from "@applicaster/zapp-react-native-ui-components/Components/Focusable";
 
 export default function Button({ label, groupId, onPress, preferredFocus }) {
@@ -42,7 +42,7 @@ const styles = {
         width: 0,
         height: 6,
       },
-      width: 650,
+      width: Platform.OS === 'ios' ? 650 : 600,
       shadowOpacity: 0.37,
       shadowRadius: 7.49,
       elevation: 12,

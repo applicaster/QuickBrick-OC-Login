@@ -38,7 +38,7 @@ export class OCLoginPluginComponent extends React.Component {
     if (this.state.isPrehook && (accessToken || skipPrehook)) {
       this.props.callback({ success: true })
     }
-    else if (!this.state.isPrehook && (accessToken && accessToken !== 'NOT_SET') && userName) {
+    else if (!this.state.isPrehook && (accessToken && accessToken !== 'NOT_SET')) {
       this.setState({
         screen: 'WELCOME',
         userName,

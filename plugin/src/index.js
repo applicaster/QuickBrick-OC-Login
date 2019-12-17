@@ -4,6 +4,7 @@ import IntroScreen from './screens/IntroScreen';
 import SignInScreen from './screens/SignInScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import LoadingScreen from './screens/LoadingScreen';
+import LegalScreen from "./screens/LegalScreen";
 import { localStorage } from "@applicaster/zapp-react-native-bridge/ZappStorage/LocalStorage";
 
 const NAMESPACE = "quick-brick-oc-login-plugin";
@@ -45,6 +46,11 @@ export class OCLoginPluginComponent extends React.Component {
         accessToken
       })
     }
+    else if (this.state.isPrehook && !accessToken) {
+      this.setState({
+        screen: 'LEGAL'
+      })
+    }
     else {
       this.setState({
         screen: 'INTRO'
@@ -84,10 +90,12 @@ export class OCLoginPluginComponent extends React.Component {
     }
 
     const segmentKey = getPluginData('segment_key');
+    const legalContent = getPluginData('legal_content');
     const gygiaCreateDeviceUrl = getPluginData('gygia_create_device_url');
     const gygiaGetDeviceByPinUrl = getPluginData('gygia_get_device_by_pin_url')
     const gygiaQrUrl = getPluginData('gygia_qr_url');
     const gygiaLogoutUrl = getPluginData('gygia_logout_url');
+    const gygiaSupportUrl = getPluginData('gygia_support_url')
 
     switch (screen) {
       case 'LOADING': {
@@ -96,6 +104,15 @@ export class OCLoginPluginComponent extends React.Component {
           isPrehook={this.state.isPrehook}
           groupId={getGroupId()}
           segmentKey={segmentKey}
+        />;
+      }
+      case 'LEGAL': {
+        return <LegalScreen
+          goToScreen={this.goToScreen}
+          isPrehook={this.state.isPrehook}
+          groupId={getGroupId()}
+          segmentKey={segmentKey}
+          legalContent={legalContent}
         />;
       }
       case 'INTRO': {
@@ -137,6 +154,7 @@ export class OCLoginPluginComponent extends React.Component {
           gygiaCreateDeviceUrl={gygiaCreateDeviceUrl}
           gygiaGetDeviceByPinUrl={gygiaGetDeviceByPinUrl}
           gygiaQrUrl={gygiaQrUrl}
+          gygiaSupportUrl={gygiaSupportUrl}
         />
       }
     }

@@ -58,7 +58,7 @@ class WelcomeScreen extends React.Component {
           'NOT_SET',
           this.props.namespace
         )
-        trackEvent(this.props.segmentKey, "SignOut", { userName, accessToken }, "Welcome");
+        trackEvent(this.props.segmentKey, "Signed Out", { userName, accessToken }, "Welcome");
         this.props.goToScreen('INTRO')
       }
     }).catch(err => console.log(err))

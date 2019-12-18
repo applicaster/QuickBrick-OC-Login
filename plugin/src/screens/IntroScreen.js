@@ -13,7 +13,7 @@ class IntroScreen extends React.Component {
   }
 
   componentDidMount() {
-    trackEvent(this.props.segmentKey, "Entry");
+    trackEvent(this.props.segmentKey, "User Register Start");
   }
 
   async skipPrehook() {
@@ -22,7 +22,7 @@ class IntroScreen extends React.Component {
       true,
       this.props.namespace
     )
-    trackEvent(this.props.segmentKey, "Entry", { buttonPressed: "Maybe Later" })
+    trackEvent(this.props.segmentKey, "User Register Start", { buttonPressed: "Maybe Later" })
     this.props.closeHook({ success: true })
   }
 

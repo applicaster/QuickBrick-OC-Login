@@ -83,7 +83,10 @@ class SignInScreen extends React.Component {
         }
 
       }
-    }).catch(err => console.log(err, 'LOL'))
+    }).catch(err => {
+      console.log(err);
+      trackEvent(this.props.segmentKey, "Login Error")
+    })
   }
 
   render() {

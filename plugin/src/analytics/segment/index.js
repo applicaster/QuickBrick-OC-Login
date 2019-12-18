@@ -22,7 +22,7 @@ export function trackEvent(segmentKey, screen, payload = {}, previousPage = "") 
   axios.post(TRACK_URL,
     {
       ...userId,
-      "name": `Gygia ${screen}`,
+      "event": `Gygia ${screen}`,
       "properties": {
         "name": `Gygia ${screen}`,
         "device_type": Platform.OS,

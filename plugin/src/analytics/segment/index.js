@@ -24,6 +24,7 @@ export function trackEvent(segmentKey, screen, payload = {}, previousPage = "") 
       ...userId,
       "name": `Gygia ${screen}`,
       "properties": {
+        "name": `Gygia ${screen}`,
         "device_type": Platform.OS,
         "previous_page": previousPage,
         "device_id": getAppData().uuid || uuidv4(),

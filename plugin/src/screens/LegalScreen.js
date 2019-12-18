@@ -50,7 +50,7 @@ const styles = {
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 30
+    marginTop: 10
   },
   legalSection: {
     flex: 1
